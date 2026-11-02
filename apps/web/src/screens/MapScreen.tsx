@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import { useNavigate } from "react-router-dom";
 import { TENSE_TIMEFRAMES, TENSE_GROUPS, type Unit, type TenseTimeframe, type TenseGroup } from "@tense-lab/shared";
 import { GlassCard } from "../components/GlassCard";
 import { UnitNode, type UnitNodeStatus } from "../components/UnitNode";
@@ -14,6 +15,7 @@ const TIMEFRAME_LABEL: Record<TenseTimeframe, string> = {
 export function MapScreen() {
   const user = useAuthStore((s) => s.user);
   const logout = useAuthStore((s) => s.logout);
+  const navigate = useNavigate();
 
   const { data: units, isLoading, error } = useQuery({ queryKey: ["units"], queryFn: api.getUnits });
 
@@ -67,7 +69,7 @@ export function MapScreen() {
                       key={unit.id}
                       unit={unit}
                       status={statusFor(unit)}
-                      onSelect={(selected) => console.log("open unit", selected.id)}
+                      onSelect={(selected) => navigate(`/unit/${selected.id}`)}
                     />
                   );
                 })}

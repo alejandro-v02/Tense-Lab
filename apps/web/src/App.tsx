@@ -3,6 +3,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import { useAuthStore } from "./store/auth.store";
 import { LoginScreen } from "./screens/LoginScreen";
 import { MapScreen } from "./screens/MapScreen";
+import { UnitScreen } from "./screens/UnitScreen";
 
 function RequireAuth({ children }: { children: ReactNode }) {
   const token = useAuthStore((s) => s.token);
@@ -21,6 +22,14 @@ export default function App() {
         element={
           <RequireAuth>
             <MapScreen />
+          </RequireAuth>
+        }
+      />
+      <Route
+        path="/unit/:id"
+        element={
+          <RequireAuth>
+            <UnitScreen />
           </RequireAuth>
         }
       />
