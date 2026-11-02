@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useNavigate } from "react-router-dom";
 import { TENSE_TIMEFRAMES, TENSE_GROUPS, type Unit, type TenseTimeframe, type TenseGroup } from "@tense-lab/shared";
 import { GlassCard } from "../components/GlassCard";
+import { ThemeToggle } from "../components/ThemeToggle";
 import { UnitNode, type UnitNodeStatus } from "../components/UnitNode";
 import { api } from "../lib/api";
 import { useAuthStore } from "../store/auth.store";
@@ -37,7 +38,8 @@ export function MapScreen() {
           <p className="text-sm text-(--color-ink-dim)">{user?.name ?? "Invitado"}</p>
         </div>
         <div className="flex items-center gap-4">
-          <span className="rounded-ios-pill glass px-4 py-2 text-sm font-semibold text-(--color-fn-time)">
+          <ThemeToggle />
+          <span className="rounded-ios-pill glass px-4 py-2 text-sm font-semibold text-(--color-accent)">
             {user?.xp ?? 0} XP
           </span>
           <button
@@ -51,7 +53,7 @@ export function MapScreen() {
       </GlassCard>
 
       {isLoading && <p className="text-center text-(--color-ink-dim)">Cargando unidades...</p>}
-      {error && <p className="text-center text-(--color-fn-verb)">No se pudieron cargar las unidades.</p>}
+      {error && <p className="text-center text-(--color-danger)">No se pudieron cargar las unidades.</p>}
 
       {units && (
         <div className="flex flex-col gap-6">

@@ -1,4 +1,14 @@
-import type { BuildableSentence } from "@tense-lab/shared";
+import type { BuildableSentence, WordFunction } from "@tense-lab/shared";
+
+export const FUNCTION_COLOR_VAR: Record<WordFunction, string> = {
+  subject: "--color-fn-subject",
+  auxiliary: "--color-fn-auxiliary",
+  verb: "--color-fn-verb",
+  complement: "--color-fn-complement",
+  time: "--color-fn-time",
+  adverb: "--color-fn-adverb",
+  connector: "--color-fn-connector",
+};
 
 export function normalizeAnswer(text: string): string {
   return text

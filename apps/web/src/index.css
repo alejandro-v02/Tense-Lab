@@ -8,73 +8,127 @@
   --radius-ios-xl: 36px;
   --radius-ios-pill: 999px;
 
-  /* Base surface */
-  --color-bg: #0b0b14;
-  --color-bg-elevated: #121220;
-  --color-ink: #f4f4f8;
-  --color-ink-dim: #a3a3b2;
-
-  /* Word-function colors (Sentence Builder blocks, line highlights) */
-  --color-fn-subject: #0a84ff;
-  --color-fn-auxiliary: #bf5af2;
-  --color-fn-verb: #ff453a;
-  --color-fn-complement: #30d158;
-  --color-fn-time: #ff9f0a;
-  --color-fn-adverb: #64d2ff;
-  --color-fn-connector: #ffd60a;
-
-  /* Error-category colors (writing editor underlines, diagnostics) */
-  --color-err-conjugation: #0a84ff;
-  --color-err-auxiliary: #bf5af2;
-  --color-err-participle: #5e5ce6;
-  --color-err-word-order: #ff9f0a;
-  --color-err-preposition: #64d2ff;
-  --color-err-article: #63e6e2;
-  --color-err-agreement: #ff453a;
-  --color-err-vocabulary: #30d158;
-  --color-err-spelling: #ff375f;
-  --color-err-punctuation: #ffd60a;
-  --color-err-wrong-tense: #ac8e68;
-  --color-err-other: #8e8e93;
-
   --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", Inter, "Segoe UI", system-ui,
     sans-serif;
 }
 
-:root {
+/* Dark theme (default): near-black/white/gray, color reserved for small accents. */
+:root,
+:root[data-theme="dark"] {
   color-scheme: dark;
+
+  --color-bg: #0a0a0b;
+  --color-bg-elevated: #161617;
+  --color-ink: #f2f2f2;
+  --color-ink-dim: #96969b;
+  --color-border: rgba(255, 255, 255, 0.14);
+
+  /* The only three "real" colors in the dark theme's UI chrome, used sparingly. */
+  --color-accent: #7c9eff;
+  --color-success: #4cd37d;
+  --color-danger: #ff6b6b;
+
+  --glass-bg: rgba(255, 255, 255, 0.06);
+  --glass-bg-strong: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-border-strong: rgba(255, 255, 255, 0.16);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  --glass-shadow-strong: 0 12px 40px rgba(0, 0, 0, 0.4);
+  --glass-inset: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  --glass-inset-strong: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+
+  /* Word-function colors (grammar role chips) — muted, not neon. */
+  --color-fn-subject: #5b8def;
+  --color-fn-auxiliary: #a67bdb;
+  --color-fn-verb: #d9655f;
+  --color-fn-complement: #4fb87a;
+  --color-fn-time: #d99a4e;
+  --color-fn-adverb: #5fb8c9;
+  --color-fn-connector: #c9b458;
+
+  --color-err-conjugation: #5b8def;
+  --color-err-auxiliary: #a67bdb;
+  --color-err-participle: #8d84e0;
+  --color-err-word-order: #d99a4e;
+  --color-err-preposition: #5fb8c9;
+  --color-err-article: #5bb8b0;
+  --color-err-agreement: #d9655f;
+  --color-err-vocabulary: #4fb87a;
+  --color-err-spelling: #d9577a;
+  --color-err-punctuation: #c9b458;
+  --color-err-wrong-tense: #ac8e68;
+  --color-err-other: #8e8e93;
+}
+
+/* Light theme: off-white/gray surfaces, same restrained accents darkened for contrast. */
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --color-bg: #f1f1f0;
+  --color-bg-elevated: #ffffff;
+  --color-ink: #1c1c1e;
+  --color-ink-dim: #6e6e73;
+  --color-border: rgba(0, 0, 0, 0.1);
+
+  --color-accent: #3a5ccc;
+  --color-success: #1f8a4c;
+  --color-danger: #c53a3a;
+
+  --glass-bg: rgba(255, 255, 255, 0.55);
+  --glass-bg-strong: rgba(255, 255, 255, 0.72);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --glass-border-strong: rgba(0, 0, 0, 0.1);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  --glass-shadow-strong: 0 12px 40px rgba(0, 0, 0, 0.1);
+  --glass-inset: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  --glass-inset-strong: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+
+  --color-fn-subject: #2f5fcf;
+  --color-fn-auxiliary: #7a4fb0;
+  --color-fn-verb: #c6433c;
+  --color-fn-complement: #2f8a57;
+  --color-fn-time: #b9711f;
+  --color-fn-adverb: #2f8a9e;
+  --color-fn-connector: #93790f;
+
+  --color-err-conjugation: #2f5fcf;
+  --color-err-auxiliary: #7a4fb0;
+  --color-err-participle: #5a4fc0;
+  --color-err-word-order: #b9711f;
+  --color-err-preposition: #2f8a9e;
+  --color-err-article: #1f8a7f;
+  --color-err-agreement: #c6433c;
+  --color-err-vocabulary: #2f8a57;
+  --color-err-spelling: #b5305a;
+  --color-err-punctuation: #93790f;
+  --color-err-wrong-tense: #8a6c47;
+  --color-err-other: #6e6e73;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  background:
-    radial-gradient(circle at 15% 0%, rgba(10, 132, 255, 0.18), transparent 55%),
-    radial-gradient(circle at 85% 20%, rgba(191, 90, 242, 0.14), transparent 50%),
-    var(--color-bg);
+  background: var(--color-bg);
   color: var(--color-ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 @layer components {
   .glass {
-    background: rgba(255, 255, 255, 0.06);
-    backdrop-filter: blur(24px) saturate(160%);
-    -webkit-backdrop-filter: blur(24px) saturate(160%);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    box-shadow:
-      0 8px 32px rgba(0, 0, 0, 0.35),
-      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    background: var(--glass-bg);
+    backdrop-filter: blur(24px) saturate(140%);
+    -webkit-backdrop-filter: blur(24px) saturate(140%);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow), var(--glass-inset);
   }
 
   .glass-strong {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(32px) saturate(180%);
-    -webkit-backdrop-filter: blur(32px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    box-shadow:
-      0 12px 40px rgba(0, 0, 0, 0.4),
-      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    background: var(--glass-bg-strong);
+    backdrop-filter: blur(32px) saturate(160%);
+    -webkit-backdrop-filter: blur(32px) saturate(160%);
+    border: 1px solid var(--glass-border-strong);
+    box-shadow: var(--glass-shadow-strong), var(--glass-inset-strong);
   }
 }

@@ -1,6 +1,7 @@
-import type { ReactNode } from "react";
+import { useEffect, type ReactNode } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { useAuthStore } from "./store/auth.store";
+import { useThemeStore } from "./store/theme.store";
 import { LoginScreen } from "./screens/LoginScreen";
 import { MapScreen } from "./screens/MapScreen";
 import { UnitScreen } from "./screens/UnitScreen";
@@ -14,6 +15,12 @@ function RequireAuth({ children }: { children: ReactNode }) {
 }
 
 export default function App() {
+  const theme = useThemeStore((s) => s.theme);
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [theme]);
+
   return (
     <Routes>
       <Route path="/login" element={<LoginScreen />} />

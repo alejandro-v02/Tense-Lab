@@ -42,7 +42,7 @@ export function TranslateExercise({ sentence, onNext, onResult }: TranslateExerc
         placeholder="Write the sentence in English..."
         autoFocus
         rows={2}
-        className="glass rounded-ios w-full max-w-xl resize-none border-2 border-transparent px-4 py-3 text-center text-lg outline-none focus:border-(--color-fn-subject)"
+        className="glass rounded-ios w-full max-w-xl resize-none border-2 border-transparent px-4 py-3 text-center text-lg outline-none focus:border-(--color-accent)"
       />
 
       <AnimatePresence mode="wait">
@@ -53,7 +53,7 @@ export function TranslateExercise({ sentence, onNext, onResult }: TranslateExerc
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
             className={`text-center font-semibold ${
-              result === "correct" ? "text-(--color-fn-complement)" : "text-(--color-fn-verb)"
+              result === "correct" ? "text-(--color-success)" : "text-(--color-danger)"
             }`}
           >
             {result === "correct" ? "¡Correcto!" : `Casi. Una forma correcta: "${buildCanonicalSentences(sentence)[0]}${sentence.endMark}"`}
@@ -65,7 +65,7 @@ export function TranslateExercise({ sentence, onNext, onResult }: TranslateExerc
         <button
           type="button"
           onClick={check}
-          className="rounded-ios-pill bg-(--color-fn-subject) px-6 py-3 font-semibold text-white transition active:scale-95"
+          className="rounded-ios-pill bg-(--color-ink) px-6 py-3 font-semibold text-(--color-bg) transition active:scale-95"
         >
           Revisar
         </button>

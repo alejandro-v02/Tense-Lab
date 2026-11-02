@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import type { BuildableSentence } from "@tense-lab/shared";
-import { normalizeAnswer, pickBlankIndex } from "../lib/sentence";
+import { FUNCTION_COLOR_VAR, normalizeAnswer, pickBlankIndex } from "../lib/sentence";
 
 interface CompleteExerciseProps {
   sentence: BuildableSentence;
@@ -11,6 +11,7 @@ interface CompleteExerciseProps {
 
 export function CompleteExercise({ sentence, onNext, onResult }: CompleteExerciseProps) {
   const blankIndex = pickBlankIndex(sentence);
+  const blankColorVar = FUNCTION_COLOR_VAR[sentence.blocks[blankIndex].function];
   const [value, setValue] = useState("");
   const [result, setResult] = useState<"idle" | "correct" | "incorrect">("idle");
 
@@ -38,7 +39,8 @@ export function CompleteExercise({ sentence, onNext, onResult }: CompleteExercis
               onKeyDown={(e) => e.key === "Enter" && check()}
               placeholder="..."
               autoFocus
-              className="glass rounded-ios-sm w-32 border-2 border-(--color-fn-auxiliary) px-3 py-1 text-center font-semibold text-(--color-fn-auxiliary) outline-none"
+              style={{ borderColor: `var(${blankColorVar})`, color: `var(${blankColorVar})` }}
+              className="glass rounded-ios-sm w-32 border-2 px-3 py-1 text-center font-semibold outline-none"
             />
           ) : (
             <span key={i} className="font-medium">
@@ -56,7 +58,7 @@ export function CompleteExercise({ sentence, onNext, onResult }: CompleteExercis
             initial={{ opacity: 0, y: -6 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
-            className={`font-semibold ${result === "correct" ? "text-(--color-fn-complement)" : "text-(--color-fn-verb)"}`}
+            className={`font-semibold ${result === "correct" ? "text-(--color-success)" : "text-(--color-danger)"}`}
           >
             {result === "correct" ? "¡Correcto!" : `Casi. La respuesta era "${sentence.blocks[blankIndex].text}".`}
           </motion.p>
@@ -67,7 +69,7 @@ export function CompleteExercise({ sentence, onNext, onResult }: CompleteExercis
         <button
           type="button"
           onClick={check}
-          className="rounded-ios-pill bg-(--color-fn-subject) px-6 py-3 font-semibold text-white transition active:scale-95"
+          className="rounded-ios-pill bg-(--color-ink) px-6 py-3 font-semibold text-(--color-bg) transition active:scale-95"
         >
           Revisar
         </button>

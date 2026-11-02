@@ -2,6 +2,7 @@ import { useState, type FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "motion/react";
 import { GlassCard } from "../components/GlassCard";
+import { ThemeToggle } from "../components/ThemeToggle";
 import { api } from "../lib/api";
 import { useAuthStore } from "../store/auth.store";
 
@@ -35,6 +36,9 @@ export function LoginScreen() {
 
   return (
     <div className="flex min-h-screen items-center justify-center px-4">
+      <div className="fixed top-4 right-4">
+        <ThemeToggle />
+      </div>
       <motion.div
         initial={{ opacity: 0, y: 16, scale: 0.98 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -55,7 +59,7 @@ export function LoginScreen() {
                 placeholder="Nombre"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="glass rounded-ios-sm bg-transparent px-4 py-3 text-(--color-ink) placeholder:text-(--color-ink-dim) outline-none focus:border-(--color-fn-subject)"
+                className="glass rounded-ios-sm bg-transparent px-4 py-3 text-(--color-ink) placeholder:text-(--color-ink-dim) outline-none focus:border-(--color-accent)"
               />
             )}
             <input
@@ -64,7 +68,7 @@ export function LoginScreen() {
               placeholder="Correo"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="glass rounded-ios-sm bg-transparent px-4 py-3 text-(--color-ink) placeholder:text-(--color-ink-dim) outline-none focus:border-(--color-fn-subject)"
+              className="glass rounded-ios-sm bg-transparent px-4 py-3 text-(--color-ink) placeholder:text-(--color-ink-dim) outline-none focus:border-(--color-accent)"
             />
             <input
               type="password"
@@ -73,15 +77,15 @@ export function LoginScreen() {
               placeholder="Contraseña"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="glass rounded-ios-sm bg-transparent px-4 py-3 text-(--color-ink) placeholder:text-(--color-ink-dim) outline-none focus:border-(--color-fn-subject)"
+              className="glass rounded-ios-sm bg-transparent px-4 py-3 text-(--color-ink) placeholder:text-(--color-ink-dim) outline-none focus:border-(--color-accent)"
             />
 
-            {error && <p className="text-sm text-(--color-fn-verb)">{error}</p>}
+            {error && <p className="text-sm text-(--color-danger)">{error}</p>}
 
             <button
               type="submit"
               disabled={loading}
-              className="mt-2 rounded-ios-pill bg-(--color-fn-subject) px-6 py-3 font-semibold text-white transition active:scale-95 disabled:opacity-50"
+              className="mt-2 rounded-ios-pill bg-(--color-ink) px-6 py-3 font-semibold text-(--color-bg) transition active:scale-95 disabled:opacity-50"
             >
               {loading ? "Un momento..." : mode === "login" ? "Entrar" : "Crear cuenta"}
             </button>

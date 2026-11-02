@@ -18,16 +18,7 @@ import {
 import { CSS } from "@dnd-kit/utilities";
 import { AnimatePresence, motion } from "motion/react";
 import type { BuildableSentence, WordFunction } from "@tense-lab/shared";
-
-const FUNCTION_COLOR_VAR: Record<WordFunction, string> = {
-  subject: "--color-fn-subject",
-  auxiliary: "--color-fn-auxiliary",
-  verb: "--color-fn-verb",
-  complement: "--color-fn-complement",
-  time: "--color-fn-time",
-  adverb: "--color-fn-adverb",
-  connector: "--color-fn-connector",
-};
+import { FUNCTION_COLOR_VAR } from "../lib/sentence";
 
 function shuffledIndices(length: number): number[] {
   const indices = Array.from({ length }, (_, i) => i);
@@ -129,7 +120,7 @@ export function SentenceBuilder({ sentence, onNext, onResult }: SentenceBuilderP
             initial={{ opacity: 0, y: -6 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
-            className={`font-semibold ${result === "correct" ? "text-(--color-fn-complement)" : "text-(--color-fn-verb)"}`}
+            className={`font-semibold ${result === "correct" ? "text-(--color-success)" : "text-(--color-danger)"}`}
           >
             {result === "correct" ? "¡Correcto!" : "Todavía no. Intentá de nuevo."}
           </motion.p>
@@ -140,7 +131,7 @@ export function SentenceBuilder({ sentence, onNext, onResult }: SentenceBuilderP
         <button
           type="button"
           onClick={check}
-          className="rounded-ios-pill bg-(--color-fn-subject) px-6 py-3 font-semibold text-white transition active:scale-95"
+          className="rounded-ios-pill bg-(--color-ink) px-6 py-3 font-semibold text-(--color-bg) transition active:scale-95"
         >
           Revisar
         </button>

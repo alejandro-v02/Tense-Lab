@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { AnimatePresence, motion } from "motion/react";
 import { GlassCard } from "../components/GlassCard";
+import { ThemeToggle } from "../components/ThemeToggle";
 import { SentenceBuilder } from "../games/SentenceBuilder";
 import { CompleteExercise } from "../games/CompleteExercise";
 import { TranslateExercise } from "../games/TranslateExercise";
@@ -15,7 +16,7 @@ type Tab = (typeof TABS)[number];
 
 function tabClass(active: boolean): string {
   return `rounded-ios-pill px-5 py-2 text-sm font-semibold transition ${
-    active ? "bg-(--color-fn-subject) text-white" : "glass text-(--color-ink-dim)"
+    active ? "bg-(--color-ink) text-(--color-bg)" : "glass text-(--color-ink-dim)"
   }`;
 }
 
@@ -51,18 +52,21 @@ export function UnitScreen() {
     return <p className="p-8 text-center text-(--color-ink-dim)">Cargando unidad...</p>;
   }
   if (error || !unit) {
-    return <p className="p-8 text-center text-(--color-fn-verb)">No se pudo cargar la unidad.</p>;
+    return <p className="p-8 text-center text-(--color-danger)">No se pudo cargar la unidad.</p>;
   }
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-8">
-      <button
-        type="button"
-        onClick={() => navigate("/")}
-        className="mb-4 text-sm text-(--color-ink-dim) hover:text-(--color-ink)"
-      >
-        ← Mapa
-      </button>
+      <div className="mb-4 flex items-center justify-between">
+        <button
+          type="button"
+          onClick={() => navigate("/")}
+          className="text-sm text-(--color-ink-dim) hover:text-(--color-ink)"
+        >
+          ← Mapa
+        </button>
+        <ThemeToggle />
+      </div>
 
       <GlassCard strong className="mb-6 p-6">
         <h1 className="text-2xl font-bold">{unit.title}</h1>
@@ -133,8 +137,8 @@ export function UnitScreen() {
               <div className="flex flex-col gap-3">
                 {unit.commonMistakes.map((cm) => (
                   <div key={cm.mistake} className="glass rounded-ios-sm p-3 text-sm">
-                    <p className="text-(--color-fn-verb)">✗ {cm.mistake}</p>
-                    <p className="text-(--color-fn-complement)">✓ {cm.correction}</p>
+                    <p className="text-(--color-danger)">✗ {cm.mistake}</p>
+                    <p className="text-(--color-success)">✓ {cm.correction}</p>
                     <p className="mt-1 text-(--color-ink-dim)">{cm.explanation}</p>
                   </div>
                 ))}
@@ -154,7 +158,7 @@ export function UnitScreen() {
                   {mode === "complete" && "Completar"}
                   {mode === "translate" && "Traducir"}
                 </span>
-                <span className="glass rounded-ios-pill px-3 py-1 text-(--color-fn-complement)">
+                <span className="glass rounded-ios-pill px-3 py-1 text-(--color-success)">
                   {score.correct}/{score.total} aciertos
                 </span>
               </div>
