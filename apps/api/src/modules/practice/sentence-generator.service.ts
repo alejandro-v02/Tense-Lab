@@ -1,11 +1,11 @@
 import { Injectable } from "@nestjs/common";
 import { WORD_FUNCTIONS, parseGeneratedSentence, type BuildableSentence, type Unit } from "@tense-lab/shared";
-import { AnthropicClientService } from "../../common/ai/anthropic-client.service";
+import { GeminiClientService } from "../../common/ai/gemini-client.service";
 
 const GENERATE_TOOL_NAME = "generate_sentence";
 
 const GENERATE_TOOL_SCHEMA = {
-  type: "object" as const,
+  type: "object",
   properties: {
     spanish: { type: "string", description: "The Spanish sentence the student is asked to translate/build." },
     blocks: {
@@ -49,7 +49,7 @@ function systemPrompt(unit: Unit, avoid: string[]): string {
 
 @Injectable()
 export class SentenceGeneratorService {
-  constructor(private readonly client: AnthropicClientService) {}
+  constructor(private readonly client: GeminiClientService) {}
 
   async generate(unit: Unit, avoid: string[], id: string): Promise<BuildableSentence | null> {
     const raw = await this.client.callTool({
@@ -59,9 +59,8 @@ export class SentenceGeneratorService {
       tool: {
         name: GENERATE_TOOL_NAME,
         description: "Report the generated practice sentence.",
-        inputSchema: GENERATE_TOOL_SCHEMA,
+        parametersJsonSchema: GENERATE_TOOL_SCHEMA,
       },
-      maxTokens: 512,
     });
 
     return parseGeneratedSentence(raw, id);

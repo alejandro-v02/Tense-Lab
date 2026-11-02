@@ -4,7 +4,7 @@ import { InjectRepository } from "@nestjs/typeorm";
 import { Repository } from "typeorm";
 import type { AiError, AnalysisResponse, PositionedError } from "@tense-lab/shared";
 import { ANALYSIS_RATE_LIMIT_PER_MINUTE } from "@tense-lab/shared";
-import { AnthropicService } from "./anthropic.service";
+import { AnalysisAiService } from "./analysis-ai.service";
 import { Analysis } from "./entities/analysis.entity";
 import { CreateAnalysisDto } from "./dto/create-analysis.dto";
 
@@ -49,13 +49,13 @@ export class AnalysisService {
 
   constructor(
     @InjectRepository(Analysis) private readonly repo: Repository<Analysis>,
-    private readonly anthropic: AnthropicService,
+    private readonly ai: AnalysisAiService,
   ) {}
 
   async analyze(userId: string, dto: CreateAnalysisDto): Promise<AnalysisResponse> {
     this.enforceRateLimit(userId);
 
-    const { analysis, model } = await this.callAnthropic(dto);
+    const { analysis, model } = await this.callAi(dto);
     const errors = analysis.errors.map((error) => toPositionedError(dto.text, error));
 
     const saved = await this.repo.save(
@@ -88,11 +88,11 @@ export class AnalysisService {
     };
   }
 
-  private async callAnthropic(dto: CreateAnalysisDto) {
+  private async callAi(dto: CreateAnalysisDto) {
     try {
-      return await this.anthropic.analyzeText(dto.text, dto.mode, dto.targetTense);
+      return await this.ai.analyzeText(dto.text, dto.mode, dto.targetTense);
     } catch (error) {
-      this.logger.error("Anthropic analysis call failed", error instanceof Error ? error.stack : error);
+      this.logger.error("Analysis AI call failed", error instanceof Error ? error.stack : error);
       throw new HttpException(
         "No se pudo generar el análisis en este momento. Intentá de nuevo en un rato.",
         HttpStatus.SERVICE_UNAVAILABLE,

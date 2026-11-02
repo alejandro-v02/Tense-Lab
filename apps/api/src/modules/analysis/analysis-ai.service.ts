@@ -8,12 +8,12 @@ import {
   type AnalysisMode,
   type Tense,
 } from "@tense-lab/shared";
-import { AnthropicClientService } from "../../common/ai/anthropic-client.service";
+import { GeminiClientService } from "../../common/ai/gemini-client.service";
 
 const REPORT_TOOL_NAME = "report_analysis";
 
 const REPORT_TOOL_SCHEMA = {
-  type: "object" as const,
+  type: "object",
   properties: {
     score: { type: "number", description: "Overall writing quality for this text, 0-100." },
     summary: {
@@ -41,8 +41,8 @@ const REPORT_TOOL_SCHEMA = {
             description: "If `quote` appears more than once in the text, which occurrence this is (1 = first).",
           },
           category: { type: "string", enum: ERROR_CATEGORIES },
-          usedTense: { type: ["string", "null"], enum: [...TENSES, null] },
-          expectedTense: { type: ["string", "null"], enum: [...TENSES, null] },
+          usedTense: { type: "string", enum: TENSES, description: "Omit if not applicable." },
+          expectedTense: { type: "string", enum: TENSES, description: "Omit if not applicable." },
           severity: { type: "string", enum: ERROR_SEVERITIES },
           explanation: { type: "string", description: "Why this is wrong, in Spanish, written for a learner." },
           rule: { type: "string", description: "The short grammar rule this breaks, in Spanish." },
@@ -67,13 +67,13 @@ function systemPrompt(mode: AnalysisMode, targetTense?: Tense): string {
     "For every error, `quote` must be copied verbatim (same casing, same characters) from the student's text — it is used to locate the error, so do not paraphrase it.",
     "Write `explanation`, `rule`, and `summary` in Spanish, since the student is a Spanish speaker. Write `correctedText` and `correction` in English.",
     "If the text has no errors, return an empty `errors` array and a high score.",
-    "Call the report_analysis tool with your findings; do not respond with plain text.",
+    "Call the report_analysis function with your findings.",
   ].join(" ");
 }
 
 @Injectable()
-export class AnthropicService {
-  constructor(private readonly client: AnthropicClientService) {}
+export class AnalysisAiService {
+  constructor(private readonly client: GeminiClientService) {}
 
   async analyzeText(
     text: string,
@@ -86,7 +86,11 @@ export class AnthropicService {
       model,
       system: systemPrompt(mode, targetTense),
       userContent: text,
-      tool: { name: REPORT_TOOL_NAME, description: "Report the writing analysis.", inputSchema: REPORT_TOOL_SCHEMA },
+      tool: {
+        name: REPORT_TOOL_NAME,
+        description: "Report the writing analysis.",
+        parametersJsonSchema: REPORT_TOOL_SCHEMA,
+      },
     });
 
     return { analysis: parseAiAnalysisResponse(raw), model };

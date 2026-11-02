@@ -1,8 +1,8 @@
 import { Module } from "@nestjs/common";
-import { AnthropicClientService } from "./anthropic-client.service";
+import { GeminiClientService } from "./gemini-client.service";
 
 @Module({
-  providers: [AnthropicClientService],
-  exports: [AnthropicClientService],
+  providers: [GeminiClientService],
+  exports: [GeminiClientService],
 })
 export class AiModule {}
