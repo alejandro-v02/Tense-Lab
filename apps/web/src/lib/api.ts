@@ -1,4 +1,4 @@
-import type { AuthResponse, PublicUser, Unit } from "@tense-lab/shared";
+import type { AnalysisRequest, AnalysisResponse, AuthResponse, PublicUser, Unit } from "@tense-lab/shared";
 import { useAuthStore } from "../store/auth.store";
 
 const BASE = "/api";
@@ -49,4 +49,9 @@ export const api = {
   me: () => request<PublicUser>("/auth/me"),
   getUnits: () => request<Unit[]>("/content/units"),
   getUnit: (id: string) => request<Unit>(`/content/units/${id}`),
+  analyze: (body: AnalysisRequest) =>
+    request<AnalysisResponse>("/analysis", {
+      method: "POST",
+      body: JSON.stringify(body),
+    }),
 };

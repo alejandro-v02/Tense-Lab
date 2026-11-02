@@ -7,11 +7,12 @@ import { ThemeToggle } from "../components/ThemeToggle";
 import { SentenceBuilder } from "../games/SentenceBuilder";
 import { CompleteExercise } from "../games/CompleteExercise";
 import { TranslateExercise } from "../games/TranslateExercise";
+import { WritingExercise } from "../games/WritingExercise";
 import { useSentencePractice } from "../hooks/useSentencePractice";
 import { useExerciseRotation } from "../hooks/useExerciseRotation";
 import { api } from "../lib/api";
 
-const TABS = ["understand", "build"] as const;
+const TABS = ["understand", "build", "write"] as const;
 type Tab = (typeof TABS)[number];
 
 function tabClass(active: boolean): string {
@@ -81,6 +82,9 @@ export function UnitScreen() {
         </button>
         <button type="button" onClick={() => setTab("build")} className={tabClass(tab === "build")}>
           Construir
+        </button>
+        <button type="button" onClick={() => setTab("write")} className={tabClass(tab === "write")}>
+          Escribir
         </button>
       </div>
 
@@ -182,6 +186,12 @@ export function UnitScreen() {
           ) : (
             <p className="text-center text-(--color-ink-dim)">No hay oraciones para esta unidad todavía.</p>
           )}
+        </GlassCard>
+      )}
+
+      {tab === "write" && (
+        <GlassCard className="p-6">
+          <WritingExercise key={unit.id} unit={unit} />
         </GlassCard>
       )}
     </div>
