@@ -77,9 +77,10 @@ function BlockChip({ id, text, fn }: { id: string; text: string; fn: WordFunctio
 interface SentenceBuilderProps {
   sentence: BuildableSentence;
   onNext: () => void;
+  onResult?: (correct: boolean) => void;
 }
 
-export function SentenceBuilder({ sentence, onNext }: SentenceBuilderProps) {
+export function SentenceBuilder({ sentence, onNext, onResult }: SentenceBuilderProps) {
   const [order, setOrder] = useState<number[]>(() => shuffledIndices(sentence.blocks.length));
   const [result, setResult] = useState<"idle" | "correct" | "incorrect">("idle");
 
@@ -99,7 +100,11 @@ export function SentenceBuilder({ sentence, onNext }: SentenceBuilderProps) {
     setResult("idle");
   };
 
-  const check = () => setResult(isCorrectOrder(order, sentence) ? "correct" : "incorrect");
+  const check = () => {
+    const correct = isCorrectOrder(order, sentence);
+    setResult(correct ? "correct" : "incorrect");
+    onResult?.(correct);
+  };
 
   return (
     <div className="flex flex-col items-center gap-6">

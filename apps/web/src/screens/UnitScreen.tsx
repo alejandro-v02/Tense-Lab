@@ -1,9 +1,13 @@
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
+import { AnimatePresence, motion } from "motion/react";
 import { GlassCard } from "../components/GlassCard";
 import { SentenceBuilder } from "../games/SentenceBuilder";
+import { CompleteExercise } from "../games/CompleteExercise";
+import { TranslateExercise } from "../games/TranslateExercise";
 import { useSentencePractice } from "../hooks/useSentencePractice";
+import { useExerciseRotation } from "../hooks/useExerciseRotation";
 import { api } from "../lib/api";
 
 const TABS = ["understand", "build"] as const;
@@ -19,6 +23,7 @@ export function UnitScreen() {
   const { id = "" } = useParams();
   const navigate = useNavigate();
   const [tab, setTab] = useState<Tab>("understand");
+  const [score, setScore] = useState({ correct: 0, total: 0 });
 
   const {
     data: unit,
@@ -31,6 +36,16 @@ export function UnitScreen() {
   });
 
   const practice = useSentencePractice(id, unit?.sentences ?? []);
+  const { mode, rotate } = useExerciseRotation();
+
+  const handleNext = () => {
+    rotate();
+    practice.next();
+  };
+
+  const handleResult = (correct: boolean) => {
+    setScore((s) => ({ correct: s.correct + (correct ? 1 : 0), total: s.total + 1 }));
+  };
 
   if (isLoading) {
     return <p className="p-8 text-center text-(--color-ink-dim)">Cargando unidad...</p>;
@@ -102,13 +117,66 @@ export function UnitScreen() {
               ))}
             </div>
           </div>
+
+          {unit.timeline.description && (
+            <div>
+              <h2 className="mb-2 text-sm font-semibold uppercase tracking-wide text-(--color-ink-dim)">Línea de tiempo</h2>
+              <p className="text-sm">{unit.timeline.description}</p>
+            </div>
+          )}
+
+          {unit.commonMistakes.length > 0 && (
+            <div>
+              <h2 className="mb-2 text-sm font-semibold uppercase tracking-wide text-(--color-ink-dim)">
+                Errores comunes
+              </h2>
+              <div className="flex flex-col gap-3">
+                {unit.commonMistakes.map((cm) => (
+                  <div key={cm.mistake} className="glass rounded-ios-sm p-3 text-sm">
+                    <p className="text-(--color-fn-verb)">✗ {cm.mistake}</p>
+                    <p className="text-(--color-fn-complement)">✓ {cm.correction}</p>
+                    <p className="mt-1 text-(--color-ink-dim)">{cm.explanation}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </GlassCard>
       )}
 
       {tab === "build" && (
         <GlassCard className="p-6">
           {practice.current ? (
-            <SentenceBuilder key={practice.current.id} sentence={practice.current} onNext={practice.next} />
+            <>
+              <div className="mb-5 flex items-center justify-between text-xs font-semibold uppercase tracking-wide text-(--color-ink-dim)">
+                <span>
+                  {mode === "blocks" && "Ordenar bloques"}
+                  {mode === "complete" && "Completar"}
+                  {mode === "translate" && "Traducir"}
+                </span>
+                <span className="glass rounded-ios-pill px-3 py-1 text-(--color-fn-complement)">
+                  {score.correct}/{score.total} aciertos
+                </span>
+              </div>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={`${practice.current.id}-${mode}`}
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0 }}
+                >
+                  {mode === "blocks" && (
+                    <SentenceBuilder sentence={practice.current} onNext={handleNext} onResult={handleResult} />
+                  )}
+                  {mode === "complete" && (
+                    <CompleteExercise sentence={practice.current} onNext={handleNext} onResult={handleResult} />
+                  )}
+                  {mode === "translate" && (
+                    <TranslateExercise sentence={practice.current} onNext={handleNext} onResult={handleResult} />
+                  )}
+                </motion.div>
+              </AnimatePresence>
+            </>
           ) : (
             <p className="text-center text-(--color-ink-dim)">No hay oraciones para esta unidad todavía.</p>
           )}
