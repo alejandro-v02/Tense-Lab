@@ -12,12 +12,16 @@ interface TranslateExerciseProps {
 export function TranslateExercise({ sentence, onNext, onResult }: TranslateExerciseProps) {
   const [value, setValue] = useState("");
   const [result, setResult] = useState<"idle" | "correct" | "incorrect">("idle");
+  const [scored, setScored] = useState(false);
 
   const check = () => {
     if (!value.trim()) return;
     const correct = matchesSentence(value, sentence);
     setResult(correct ? "correct" : "incorrect");
-    onResult?.(correct);
+    if (!scored) {
+      onResult?.(correct);
+      setScored(true);
+    }
   };
 
   return (

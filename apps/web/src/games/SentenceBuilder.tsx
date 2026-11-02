@@ -74,6 +74,7 @@ interface SentenceBuilderProps {
 export function SentenceBuilder({ sentence, onNext, onResult }: SentenceBuilderProps) {
   const [order, setOrder] = useState<number[]>(() => shuffledIndices(sentence.blocks.length));
   const [result, setResult] = useState<"idle" | "correct" | "incorrect">("idle");
+  const [scored, setScored] = useState(false);
 
   const sensors = useSensors(
     useSensor(PointerSensor, { activationConstraint: { distance: 4 } }),
@@ -94,7 +95,10 @@ export function SentenceBuilder({ sentence, onNext, onResult }: SentenceBuilderP
   const check = () => {
     const correct = isCorrectOrder(order, sentence);
     setResult(correct ? "correct" : "incorrect");
-    onResult?.(correct);
+    if (!scored) {
+      onResult?.(correct);
+      setScored(true);
+    }
   };
 
   return (

@@ -14,12 +14,16 @@ export function CompleteExercise({ sentence, onNext, onResult }: CompleteExercis
   const blankColorVar = FUNCTION_COLOR_VAR[sentence.blocks[blankIndex].function];
   const [value, setValue] = useState("");
   const [result, setResult] = useState<"idle" | "correct" | "incorrect">("idle");
+  const [scored, setScored] = useState(false);
 
   const check = () => {
     if (!value.trim()) return;
     const correct = normalizeAnswer(value) === normalizeAnswer(sentence.blocks[blankIndex].text);
     setResult(correct ? "correct" : "incorrect");
-    onResult?.(correct);
+    if (!scored) {
+      onResult?.(correct);
+      setScored(true);
+    }
   };
 
   return (

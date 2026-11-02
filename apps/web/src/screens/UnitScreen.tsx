@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-import { AnimatePresence, motion } from "motion/react";
+import { motion } from "motion/react";
 import { GlassCard } from "../components/GlassCard";
 import { ThemeToggle } from "../components/ThemeToggle";
 import { SentenceBuilder } from "../games/SentenceBuilder";
@@ -162,24 +162,22 @@ export function UnitScreen() {
                   {score.correct}/{score.total} aciertos
                 </span>
               </div>
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={`${practice.current.id}-${mode}`}
-                  initial={{ opacity: 0, y: 8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0 }}
-                >
-                  {mode === "blocks" && (
-                    <SentenceBuilder sentence={practice.current} onNext={handleNext} onResult={handleResult} />
-                  )}
-                  {mode === "complete" && (
-                    <CompleteExercise sentence={practice.current} onNext={handleNext} onResult={handleResult} />
-                  )}
-                  {mode === "translate" && (
-                    <TranslateExercise sentence={practice.current} onNext={handleNext} onResult={handleResult} />
-                  )}
-                </motion.div>
-              </AnimatePresence>
+              <motion.div
+                key={`${practice.current.id}-${mode}`}
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.2 }}
+              >
+                {mode === "blocks" && (
+                  <SentenceBuilder sentence={practice.current} onNext={handleNext} onResult={handleResult} />
+                )}
+                {mode === "complete" && (
+                  <CompleteExercise sentence={practice.current} onNext={handleNext} onResult={handleResult} />
+                )}
+                {mode === "translate" && (
+                  <TranslateExercise sentence={practice.current} onNext={handleNext} onResult={handleResult} />
+                )}
+              </motion.div>
             </>
           ) : (
             <p className="text-center text-(--color-ink-dim)">No hay oraciones para esta unidad todavía.</p>
