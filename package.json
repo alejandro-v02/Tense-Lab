@@ -11,9 +11,12 @@
     "build:shared": "pnpm --filter @tense-lab/shared build",
     "dev:api": "pnpm --filter @tense-lab/api start:dev",
     "dev:web": "pnpm --filter @tense-lab/web dev",
-    "typecheck": "pnpm -r typecheck",
-    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r --if-present typecheck",
+    "lint": "pnpm -r --if-present lint",
     "docker:up": "docker compose up -d",
     "docker:down": "docker compose down"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["bcrypt"]
   }
 }
