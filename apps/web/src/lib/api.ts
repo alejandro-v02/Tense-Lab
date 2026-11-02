@@ -1,4 +1,4 @@
-import type { AnalysisRequest, AnalysisResponse, AuthResponse, PublicUser, Unit } from "@tense-lab/shared";
+import type { AnalysisRequest, AnalysisResponse, AuthResponse, BuildableSentence, PublicUser, Unit } from "@tense-lab/shared";
 import { useAuthStore } from "../store/auth.store";
 
 const BASE = "/api";
@@ -53,5 +53,10 @@ export const api = {
     request<AnalysisResponse>("/analysis", {
       method: "POST",
       body: JSON.stringify(body),
+    }),
+  generateSentence: (unitId: string, avoid: string[]) =>
+    request<BuildableSentence>(`/practice/units/${unitId}/sentences/generate`, {
+      method: "POST",
+      body: JSON.stringify({ avoid }),
     }),
 };

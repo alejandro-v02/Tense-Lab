@@ -37,7 +37,7 @@ export function UnitScreen() {
     enabled: Boolean(id),
   });
 
-  const practice = useSentencePractice(id, unit?.sentences ?? []);
+  const practice = useSentencePractice(unit);
   const { mode, rotate } = useExerciseRotation();
 
   const handleNext = () => {
@@ -161,6 +161,7 @@ export function UnitScreen() {
                   {mode === "blocks" && "Ordenar bloques"}
                   {mode === "complete" && "Completar"}
                   {mode === "translate" && "Traducir"}
+                  {practice.loading && " · generando siguiente..."}
                 </span>
                 <span className="glass rounded-ios-pill px-3 py-1 text-(--color-success)">
                   {score.correct}/{score.total} aciertos
@@ -183,6 +184,8 @@ export function UnitScreen() {
                 )}
               </motion.div>
             </>
+          ) : practice.loading ? (
+            <p className="text-center text-(--color-ink-dim)">Generando oración...</p>
           ) : (
             <p className="text-center text-(--color-ink-dim)">No hay oraciones para esta unidad todavía.</p>
           )}

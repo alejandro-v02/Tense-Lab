@@ -8,6 +8,8 @@ export type AnalysisMode = (typeof ANALYSIS_MODES)[number];
 
 export const MAX_ANALYSIS_TEXT_LENGTH = 4000;
 export const ANALYSIS_RATE_LIMIT_PER_MINUTE = 10;
+export const SENTENCE_GENERATION_RATE_LIMIT_PER_MINUTE = 30;
+export const MAX_AVOID_SENTENCES = 20;
 export const LONG_TEXT_THRESHOLD_CHARS = 400;
 export const MIN_WORDS_FOR_POSITION_DIAGNOSTICS = 40;
 

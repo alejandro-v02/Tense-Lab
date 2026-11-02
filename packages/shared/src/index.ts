@@ -4,5 +4,6 @@ export * from "./content.js";
 export * from "./sm2.js";
 export * from "./sentence-picker.js";
 export * from "./ai-schema.js";
+export * from "./sentence-gen.js";
 export * from "./progress.js";
 export * from "./api.js";

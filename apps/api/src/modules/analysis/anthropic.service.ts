@@ -1,5 +1,4 @@
 import { Injectable } from "@nestjs/common";
-import Anthropic from "@anthropic-ai/sdk";
 import {
   ERROR_CATEGORIES,
   ERROR_SEVERITIES,
@@ -9,6 +8,7 @@ import {
   type AnalysisMode,
   type Tense,
 } from "@tense-lab/shared";
+import { AnthropicClientService } from "../../common/ai/anthropic-client.service";
 
 const REPORT_TOOL_NAME = "report_analysis";
 
@@ -73,33 +73,22 @@ function systemPrompt(mode: AnalysisMode, targetTense?: Tense): string {
 
 @Injectable()
 export class AnthropicService {
-  private readonly client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
-
-  pickModel(mode: AnalysisMode): string {
-    const small = process.env.AI_MODEL_SMALL ?? "claude-haiku-5-5";
-    const large = process.env.AI_MODEL_LARGE ?? "claude-sonnet-5-5";
-    return mode === "sentence" ? small : large;
-  }
+  constructor(private readonly client: AnthropicClientService) {}
 
   async analyzeText(
     text: string,
     mode: AnalysisMode,
     targetTense?: Tense,
   ): Promise<{ analysis: AiAnalysisResponse; model: string }> {
-    const model = this.pickModel(mode);
+    const model = this.client.modelFor(mode === "sentence" ? "small" : "large");
 
-    const response = await this.client.messages.create({
+    const raw = await this.client.callTool({
       model,
-      max_tokens: 2048,
       system: systemPrompt(mode, targetTense),
-      messages: [{ role: "user", content: text }],
-      tools: [{ name: REPORT_TOOL_NAME, description: "Report the writing analysis.", input_schema: REPORT_TOOL_SCHEMA }],
-      tool_choice: { type: "tool", name: REPORT_TOOL_NAME },
+      userContent: text,
+      tool: { name: REPORT_TOOL_NAME, description: "Report the writing analysis.", inputSchema: REPORT_TOOL_SCHEMA },
     });
 
-    const toolUse = response.content.find((block) => block.type === "tool_use");
-    const analysis = parseAiAnalysisResponse(toolUse?.type === "tool_use" ? toolUse.input : null);
-
-    return { analysis, model };
+    return { analysis: parseAiAnalysisResponse(raw), model };
   }
 }
