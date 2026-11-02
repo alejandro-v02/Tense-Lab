@@ -1,0 +1,1966 @@
+[
+  {
+    "id": "present_simple",
+    "timeframe": "present",
+    "group": "simple",
+    "title": "Present Simple",
+    "formula": {
+      "affirmative": "Subject + verb (+ -s/-es with he/she/it)",
+      "negative": "Subject + do/does + not + verb (base form)",
+      "question": "Do/Does + subject + verb (base form)?"
+    },
+    "uses": [
+      "Hábitos y rutinas (I go to the gym every morning).",
+      "Hechos generales y verdades (Water boils at 100°C).",
+      "Horarios fijos (The train leaves at 9 pm).",
+      "Gustos, opiniones y estados (She likes coffee)."
+    ],
+    "signalWords": [
+      { "word": "always", "translation": "siempre" },
+      { "word": "usually", "translation": "normalmente" },
+      { "word": "often", "translation": "a menudo" },
+      { "word": "sometimes", "translation": "a veces" },
+      { "word": "never", "translation": "nunca" },
+      { "word": "every day", "translation": "todos los días" },
+      { "word": "on Mondays", "translation": "los lune3s" }
+    ],
+    "examples": [
+      { "english": "He plays football every weekend.", "spanish": "Él juega fútbol todos los fines de semana." },
+      { "english": "The store opens at 8 am.", "spanish": "La tienda abre a las 8 am." },
+      { "english": "I don't like spicy food.", "spanish": "No me gusta la comida picante." }
+    ],
+    "commonMistakes": [
+      { "mistake": "She work in a bank.", "correction": "She works in a bank.", "explanation": "La tercera persona del singular (he/she/it) necesita -s o -es en el verbo." },
+      { "mistake": "Does she works there?", "correction": "Does she work there?", "explanation": "Cuando usas does, el verbo principal vuelve a su forma base, sin -s." },
+      { "mistake": "I no like tea.", "correction": "I don't like tea.", "explanation": "La negación se forma con don't/doesn't, no con 'no' antes del verbo." }
+    ],
+    "timeline": {
+      "shape": "repetition",
+      "axisPosition": 0,
+      "referenceMoment": "now (el presente, sin un momento específico)",
+      "description": "Se dibuja como una serie de puntos repetidos alrededor del presente, porque la acción ocurre una y otra vez, no en un instante único."
+    },
+    "sentences": [
+      {
+        "id": "present_simple_1",
+        "spanish": "Ella trabaja en un hospital todos los días.",
+        "blocks": [
+          { "text": "She", "function": "subject" },
+          { "text": "works", "function": "verb" },
+          { "text": "in a hospital", "function": "complement" },
+          { "text": "every day", "function": "time" }
+        ],
+        "endMark": ".",
+        "acceptedOrders": [[3, 0, 1, 2]]
+      },
+      {
+        "id": "present_simple_2",
+        "spanish": "Ellos no comen carne.",
+        "blocks": [
+          { "text": "They", "function": "subject" },
+          { "text": "do not", "function": "auxiliary" },
+          { "text": "eat", "function": "verb" },
+          { "text": "meat", "function": "complement" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "present_simple_3",
+        "spanish": "¿Juega ella tenis los domingos?",
+        "blocks": [
+          { "text": "Does", "function": "auxiliary" },
+          { "text": "she", "function": "subject" },
+          { "text": "play", "function": "verb" },
+          { "text": "tennis", "function": "complement" },
+          { "text": "on Sundays", "function": "time" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "present_simple_4",
+        "spanish": "Mi hermano siempre llega tarde a clase.",
+        "blocks": [
+          { "text": "My brother", "function": "subject" },
+          { "text": "always", "function": "adverb" },
+          { "text": "arrives", "function": "verb" },
+          { "text": "late", "function": "complement" },
+          { "text": "to class", "function": "complement" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "present_simple_5",
+        "spanish": "Mi papá nunca bebe alcohol.",
+        "blocks": [
+          { "text": "My dad", "function": "subject" },
+          { "text": "never", "function": "adverb" },
+          { "text": "drinks", "function": "verb" },
+          { "text": "alcohol", "function": "complement" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "present_simple_6",
+        "spanish": "¿Hablas tú español en casa?",
+        "blocks": [
+          { "text": "Do", "function": "auxiliary" },
+          { "text": "you", "function": "subject" },
+          { "text": "speak", "function": "verb" },
+          { "text": "Spanish", "function": "complement" },
+          { "text": "at home", "function": "complement" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "present_simple_7",
+        "spanish": "Los estudiantes no estudian los fines de semana.",
+        "blocks": [
+          { "text": "The students", "function": "subject" },
+          { "text": "do not", "function": "auxiliary" },
+          { "text": "study", "function": "verb" },
+          { "text": "on weekends", "function": "time" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "present_simple_8",
+        "spanish": "Nosotros vivimos cerca de la playa.",
+        "blocks": [
+          { "text": "We", "function": "subject" },
+          { "text": "live", "function": "verb" },
+          { "text": "near the beach", "function": "complement" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "present_simple_9",
+        "spanish": "¿Cocina él la cena todas las noches?",
+        "blocks": [
+          { "text": "Does", "function": "auxiliary" },
+          { "text": "he", "function": "subject" },
+          { "text": "cook", "function": "verb" },
+          { "text": "dinner", "function": "complement" },
+          { "text": "every night", "function": "time" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "present_simple_10",
+        "spanish": "Mi hermana estudia medicina en la universidad.",
+        "blocks": [
+          { "text": "My sister", "function": "subject" },
+          { "text": "studies", "function": "verb" },
+          { "text": "medicine", "function": "complement" },
+          { "text": "at university", "function": "complement" }
+        ],
+        "endMark": "."
+      }
+    ],
+    "writingTopics": [
+      "Describe tu rutina diaria de lunes a viernes.",
+      "Escribe sobre los hábitos alimenticios de tu familia.",
+      "Describe el horario de tu trabajo o universidad."
+    ]
+  },
+  {
+    "id": "present_continuous",
+    "timeframe": "present",
+    "group": "continuous",
+    "title": "Present Continuous",
+    "formula": {
+      "affirmative": "Subject + am/is/are + verb-ing",
+      "negative": "Subject + am/is/are + not + verb-ing",
+      "question": "Am/Is/Are + subject + verb-ing?"
+    },
+    "uses": [
+      "Acciones ocurriendo en este momento (She is studying right now).",
+      "Situaciones temporales alrededor del presente (I'm reading a great book these days).",
+      "Planes futuros ya organizados (We are meeting them tomorrow).",
+      "Tendencias y cambios (The climate is changing)."
+    ],
+    "signalWords": [
+      { "word": "now", "translation": "ahora" },
+      { "word": "right now", "translation": "ahora mismo" },
+      { "word": "at the moment", "translation": "en este momento" },
+      { "word": "currently", "translation": "actualmente" },
+      { "word": "these days", "translation": "estos días" },
+      { "word": "Look!", "translation": "¡Mira!" },
+      { "word": "Listen!", "translation": "¡Escucha!" }
+    ],
+    "examples": [
+      { "english": "I am writing an email right now.", "spanish": "Estoy escribiendo un correo en este momento." },
+      { "english": "They are not watching TV.", "spanish": "Ellos no están viendo televisión." },
+      { "english": "Is he coming to the party tonight?", "spanish": "¿Viene él a la fiesta esta noche?" }
+    ],
+    "commonMistakes": [
+      { "mistake": "She is work now.", "correction": "She is working now.", "explanation": "El verbo principal necesita la terminación -ing después de am/is/are." },
+      { "mistake": "I am not like this song.", "correction": "I don't like this song.", "explanation": "Verbos de estado (like, know, want) normalmente no se usan en continuo." },
+      { "mistake": "He working right now.", "correction": "He is working right now.", "explanation": "No se puede omitir el verbo auxiliar am/is/are." }
+    ],
+    "timeline": {
+      "shape": "range",
+      "axisPosition": 0,
+      "referenceMoment": "now (un tramo alrededor del presente)",
+      "description": "Se dibuja como una línea o tramo que cruza el momento presente, mostrando que la acción empezó antes y sigue en curso."
+    },
+    "sentences": [
+      {
+        "id": "present_continuous_1",
+        "spanish": "Estoy leyendo un libro muy interesante.",
+        "blocks": [
+          { "text": "I", "function": "subject" },
+          { "text": "am", "function": "auxiliary" },
+          { "text": "reading", "function": "verb" },
+          { "text": "a very interesting book", "function": "complement" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "present_continuous_2",
+        "spanish": "Ellos no están trabajando hoy.",
+        "blocks": [
+          { "text": "They", "function": "subject" },
+          { "text": "are not", "function": "auxiliary" },
+          { "text": "working", "function": "verb" },
+          { "text": "today", "function": "time" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "present_continuous_3",
+        "spanish": "¿Está lloviendo ahora mismo?",
+        "blocks": [
+          { "text": "Is", "function": "auxiliary" },
+          { "text": "it", "function": "subject" },
+          { "text": "raining", "function": "verb" },
+          { "text": "right now", "function": "time" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "present_continuous_4",
+        "spanish": "Nos estamos mudando a una casa nueva el próximo mes.",
+        "blocks": [
+          { "text": "We", "function": "subject" },
+          { "text": "are", "function": "auxiliary" },
+          { "text": "moving", "function": "verb" },
+          { "text": "to a new house", "function": "complement" },
+          { "text": "next month", "function": "time" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "present_continuous_5",
+        "spanish": "Estamos esperando el autobús en la esquina.",
+        "blocks": [
+          { "text": "We", "function": "subject" },
+          { "text": "are", "function": "auxiliary" },
+          { "text": "waiting", "function": "verb" },
+          { "text": "for the bus", "function": "complement" },
+          { "text": "on the corner", "function": "complement" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "present_continuous_6",
+        "spanish": "¿Están ellos estudiando para el examen?",
+        "blocks": [
+          { "text": "Are", "function": "auxiliary" },
+          { "text": "they", "function": "subject" },
+          { "text": "studying", "function": "verb" },
+          { "text": "for the exam", "function": "complement" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "present_continuous_7",
+        "spanish": "Mi jefe no está respondiendo mis correos.",
+        "blocks": [
+          { "text": "My boss", "function": "subject" },
+          { "text": "is not", "function": "auxiliary" },
+          { "text": "answering", "function": "verb" },
+          { "text": "my emails", "function": "complement" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "present_continuous_8",
+        "spanish": "El bebé está durmiendo en su cuarto.",
+        "blocks": [
+          { "text": "The baby", "function": "subject" },
+          { "text": "is", "function": "auxiliary" },
+          { "text": "sleeping", "function": "verb" },
+          { "text": "in his room", "function": "complement" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "present_continuous_9",
+        "spanish": "¿Estás escuchando esta canción?",
+        "blocks": [
+          { "text": "Are", "function": "auxiliary" },
+          { "text": "you", "function": "subject" },
+          { "text": "listening to", "function": "verb" },
+          { "text": "this song", "function": "complement" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "present_continuous_10",
+        "spanish": "Los precios están subiendo otra vez.",
+        "blocks": [
+          { "text": "Prices", "function": "subject" },
+          { "text": "are", "function": "auxiliary" },
+          { "text": "rising", "function": "verb" },
+          { "text": "again", "function": "adverb" }
+        ],
+        "endMark": "."
+      }
+    ],
+    "writingTopics": [
+      "Describe qué está pasando a tu alrededor en este momento.",
+      "Escribe sobre un plan que ya organizaste para los próximos días.",
+      "Describe un cambio o tendencia que notas en tu vida actualmente."
+    ]
+  },
+  {
+    "id": "present_perfect",
+    "timeframe": "present",
+    "group": "perfect",
+    "title": "Present Perfect",
+    "formula": {
+      "affirmative": "Subject + have/has + past participle",
+      "negative": "Subject + have/has + not + past participle",
+      "question": "Have/Has + subject + past participle?"
+    },
+    "uses": [
+      "Experiencias de vida sin tiempo específico (I have visited Peru).",
+      "Acciones pasadas con resultado visible en el presente (She has lost her keys).",
+      "Acciones que empezaron en el pasado y continúan (We have lived here for five years).",
+      "Noticias recientes (The price has gone up)."
+    ],
+    "signalWords": [
+      { "word": "ever", "translation": "alguna vez" },
+      { "word": "never", "translation": "nunca" },
+      { "word": "already", "translation": "ya" },
+      { "word": "yet", "translation": "todavía / aún" },
+      { "word": "just", "translation": "acabar de" },
+      { "word": "since", "translation": "desde" },
+      { "word": "for", "translation": "durante / por" },
+      { "word": "so far", "translation": "hasta ahora" }
+    ],
+    "examples": [
+      { "english": "I have already finished my homework.", "spanish": "Ya terminé mi tarea." },
+      { "english": "She has never been to Japan.", "spanish": "Ella nunca ha estado en Japón." },
+      { "english": "Have you seen this movie?", "spanish": "¿Has visto esta película?" }
+    ],
+    "commonMistakes": [
+      { "mistake": "I have went there.", "correction": "I have gone there.", "explanation": "Después de have/has se usa el participio pasado (gone), no el pasado simple (went)." },
+      { "mistake": "I have lived here since five years.", "correction": "I have lived here for five years.", "explanation": "Se usa for con duración (five years) y since con un punto de inicio (2019, last June)." },
+      { "mistake": "She has not finish yet.", "correction": "She has not finished yet.", "explanation": "El verbo principal después de has not debe estar en participio pasado." }
+    ],
+    "timeline": {
+      "shape": "range",
+      "axisPosition": -0.5,
+      "referenceMoment": "now, mirando hacia atrás sin fecha exacta",
+      "description": "Se dibuja como una flecha difusa que empieza en algún punto del pasado (sin marcar cuándo) y llega hasta el presente."
+    },
+    "sentences": [
+      {
+        "id": "present_perfect_1",
+        "spanish": "He terminado mi tarea.",
+        "blocks": [
+          { "text": "I", "function": "subject" },
+          { "text": "have", "function": "auxiliary" },
+          { "text": "finished", "function": "verb" },
+          { "text": "my homework", "function": "complement" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "present_perfect_2",
+        "spanish": "Ella no ha visitado México todavía.",
+        "blocks": [
+          { "text": "She", "function": "subject" },
+          { "text": "has not", "function": "auxiliary" },
+          { "text": "visited", "function": "verb" },
+          { "text": "Mexico", "function": "complement" },
+          { "text": "yet", "function": "adverb" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "present_perfect_3",
+        "spanish": "¿Has estado alguna vez en Brasil?",
+        "blocks": [
+          { "text": "Have", "function": "auxiliary" },
+          { "text": "you", "function": "subject" },
+          { "text": "ever been", "function": "verb" },
+          { "text": "to Brazil", "function": "complement" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "present_perfect_4",
+        "spanish": "Hemos vivido en esta ciudad por diez años.",
+        "blocks": [
+          { "text": "We", "function": "subject" },
+          { "text": "have", "function": "auxiliary" },
+          { "text": "lived", "function": "verb" },
+          { "text": "in this city", "function": "complement" },
+          { "text": "for ten years", "function": "time" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "present_perfect_5",
+        "spanish": "Nunca he comido comida tailandesa.",
+        "blocks": [
+          { "text": "I", "function": "subject" },
+          { "text": "have", "function": "auxiliary" },
+          { "text": "never eaten", "function": "verb" },
+          { "text": "Thai food", "function": "complement" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "present_perfect_6",
+        "spanish": "¿Ha llamado ella al médico?",
+        "blocks": [
+          { "text": "Has", "function": "auxiliary" },
+          { "text": "she", "function": "subject" },
+          { "text": "called", "function": "verb" },
+          { "text": "the doctor", "function": "complement" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "present_perfect_7",
+        "spanish": "No hemos recibido ninguna respuesta todavía.",
+        "blocks": [
+          { "text": "We", "function": "subject" },
+          { "text": "have not", "function": "auxiliary" },
+          { "text": "received", "function": "verb" },
+          { "text": "any answer", "function": "complement" },
+          { "text": "yet", "function": "adverb" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "present_perfect_8",
+        "spanish": "Han vivido en tres países diferentes.",
+        "blocks": [
+          { "text": "They", "function": "subject" },
+          { "text": "have", "function": "auxiliary" },
+          { "text": "lived", "function": "verb" },
+          { "text": "in three different countries", "function": "complement" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "present_perfect_9",
+        "spanish": "¿Has terminado tu tarea ya?",
+        "blocks": [
+          { "text": "Have", "function": "auxiliary" },
+          { "text": "you", "function": "subject" },
+          { "text": "finished", "function": "verb" },
+          { "text": "your homework", "function": "complement" },
+          { "text": "yet", "function": "adverb" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "present_perfect_10",
+        "spanish": "Mi hermano ha perdido su trabajo recientemente.",
+        "blocks": [
+          { "text": "My brother", "function": "subject" },
+          { "text": "has", "function": "auxiliary" },
+          { "text": "lost", "function": "verb" },
+          { "text": "his job", "function": "complement" },
+          { "text": "recently", "function": "adverb" }
+        ],
+        "endMark": "."
+      }
+    ],
+    "writingTopics": [
+      "Escribe sobre tres experiencias de tu vida que nunca olvidarás.",
+      "Describe algo que ya has logrado este año.",
+      "Escribe sobre algo que no has hecho todavía pero quieres hacer."
+    ]
+  },
+  {
+    "id": "present_perfect_continuous",
+    "timeframe": "present",
+    "group": "perfect_continuous",
+    "title": "Present Perfect Continuous",
+    "formula": {
+      "affirmative": "Subject + have/has + been + verb-ing",
+      "negative": "Subject + have/has + not + been + verb-ing",
+      "question": "Have/Has + subject + been + verb-ing?"
+    },
+    "uses": [
+      "Acciones que empezaron en el pasado y continúan hasta ahora, con énfasis en la duración (I have been studying for three hours).",
+      "Acciones recientes que explican un resultado presente (She's tired because she has been running).",
+      "Situaciones temporales que se repiten (He has been calling me all day)."
+    ],
+    "signalWords": [
+      { "word": "for", "translation": "durante / por" },
+      { "word": "since", "translation": "desde" },
+      { "word": "how long", "translation": "cuánto tiempo" },
+      { "word": "all day", "translation": "todo el día" },
+      { "word": "lately", "translation": "últimamente" },
+      { "word": "recently", "translation": "recientemente" }
+    ],
+    "examples": [
+      { "english": "I have been waiting for an hour.", "spanish": "He estado esperando durante una hora." },
+      { "english": "She has not been feeling well.", "spanish": "Ella no se ha estado sintiendo bien." },
+      { "english": "Have you been exercising lately?", "spanish": "¿Has estado haciendo ejercicio últimamente?" }
+    ],
+    "commonMistakes": [
+      { "mistake": "I have been study for two hours.", "correction": "I have been studying for two hours.", "explanation": "Después de been va el verbo con -ing, no la forma base." },
+      { "mistake": "I am living here since 2015.", "correction": "I have been living here since 2015.", "explanation": "Para una acción que continúa desde el pasado hasta ahora se usa present perfect continuous, no present continuous." },
+      { "mistake": "She has been run all morning.", "correction": "She has been running all morning.", "explanation": "Falta la terminación -ing en el verbo principal." }
+    ],
+    "timeline": {
+      "shape": "range",
+      "axisPosition": -0.5,
+      "referenceMoment": "now, con énfasis en la duración reciente",
+      "description": "Similar al present perfect, pero el tramo se dibuja más grueso o resaltado para mostrar que lo importante es cuánto tiempo ha durado la acción, no solo que ocurrió."
+    },
+    "sentences": [
+      {
+        "id": "present_perfect_continuous_1",
+        "spanish": "He estado esperando el autobús por veinte minutos.",
+        "blocks": [
+          { "text": "I", "function": "subject" },
+          { "text": "have been", "function": "auxiliary" },
+          { "text": "waiting", "function": "verb" },
+          { "text": "for the bus", "function": "complement" },
+          { "text": "for twenty minutes", "function": "time" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "present_perfect_continuous_2",
+        "spanish": "Ellos no han estado durmiendo bien.",
+        "blocks": [
+          { "text": "They", "function": "subject" },
+          { "text": "have not been", "function": "auxiliary" },
+          { "text": "sleeping", "function": "verb" },
+          { "text": "well", "function": "adverb" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "present_perfect_continuous_3",
+        "spanish": "¿Cuánto tiempo has estado aprendiendo inglés?",
+        "blocks": [
+          { "text": "How long", "function": "time" },
+          { "text": "have", "function": "auxiliary" },
+          { "text": "you", "function": "subject" },
+          { "text": "been learning", "function": "verb" },
+          { "text": "English", "function": "complement" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "present_perfect_continuous_4",
+        "spanish": "Él ha estado trabajando aquí desde enero.",
+        "blocks": [
+          { "text": "He", "function": "subject" },
+          { "text": "has been", "function": "auxiliary" },
+          { "text": "working", "function": "verb" },
+          { "text": "here", "function": "complement" },
+          { "text": "since January", "function": "time" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "present_perfect_continuous_5",
+        "spanish": "He estado buscando trabajo por dos meses.",
+        "blocks": [
+          { "text": "I", "function": "subject" },
+          { "text": "have been", "function": "auxiliary" },
+          { "text": "looking for", "function": "verb" },
+          { "text": "a job", "function": "complement" },
+          { "text": "for two months", "function": "time" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "present_perfect_continuous_6",
+        "spanish": "¿Has estado entrenando para la carrera?",
+        "blocks": [
+          { "text": "Have", "function": "auxiliary" },
+          { "text": "you", "function": "subject" },
+          { "text": "been training", "function": "verb" },
+          { "text": "for the race", "function": "complement" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "present_perfect_continuous_7",
+        "spanish": "Ella no ha estado comiendo bien últimamente.",
+        "blocks": [
+          { "text": "She", "function": "subject" },
+          { "text": "has not been", "function": "auxiliary" },
+          { "text": "eating", "function": "verb" },
+          { "text": "well", "function": "adverb" },
+          { "text": "lately", "function": "adverb" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "present_perfect_continuous_8",
+        "spanish": "Hemos estado ahorrando dinero para el viaje.",
+        "blocks": [
+          { "text": "We", "function": "subject" },
+          { "text": "have been", "function": "auxiliary" },
+          { "text": "saving", "function": "verb" },
+          { "text": "money", "function": "complement" },
+          { "text": "for the trip", "function": "complement" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "present_perfect_continuous_9",
+        "spanish": "¿Cuánto tiempo ha estado lloviendo?",
+        "blocks": [
+          { "text": "How long", "function": "time" },
+          { "text": "has", "function": "auxiliary" },
+          { "text": "it", "function": "subject" },
+          { "text": "been raining", "function": "verb" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "present_perfect_continuous_10",
+        "spanish": "Los niños han estado jugando videojuegos todo el día.",
+        "blocks": [
+          { "text": "The kids", "function": "subject" },
+          { "text": "have been", "function": "auxiliary" },
+          { "text": "playing", "function": "verb" },
+          { "text": "video games", "function": "complement" },
+          { "text": "all day", "function": "time" }
+        ],
+        "endMark": "."
+      }
+    ],
+    "writingTopics": [
+      "Describe algo que has estado haciendo últimamente y por qué.",
+      "Explica cómo te sientes y qué has estado haciendo para causar esa sensación.",
+      "Escribe sobre una actividad que llevas tiempo practicando."
+    ]
+  },
+  {
+    "id": "past_simple",
+    "timeframe": "past",
+    "group": "simple",
+    "title": "Past Simple",
+    "formula": {
+      "affirmative": "Subject + verb-ed (o forma irregular)",
+      "negative": "Subject + did + not + verb (forma base)",
+      "question": "Did + subject + verb (forma base)?"
+    },
+    "uses": [
+      "Acciones terminadas en un momento específico del pasado (I visited Paris in 2019).",
+      "Una serie de acciones pasadas en orden (He woke up, had breakfast and left).",
+      "Hábitos pasados que ya no ocurren (She played the piano as a child)."
+    ],
+    "signalWords": [
+      { "word": "yesterday", "translation": "ayer" },
+      { "word": "last night", "translation": "anoche" },
+      { "word": "last week", "translation": "la semana pasada" },
+      { "word": "last year", "translation": "el año pasado" },
+      { "word": "ago", "translation": "hace (tiempo)" },
+      { "word": "in 2010", "translation": "en 2010" },
+      { "word": "when I was young", "translation": "cuando era joven" }
+    ],
+    "examples": [
+      { "english": "We watched a movie last night.", "spanish": "Vimos una película anoche." },
+      { "english": "I didn't go to the party.", "spanish": "No fui a la fiesta." },
+      { "english": "Did you call your mom?", "spanish": "¿Llamaste a tu mamá?" }
+    ],
+    "commonMistakes": [
+      { "mistake": "I goed to school.", "correction": "I went to school.", "explanation": "Go es un verbo irregular; su pasado es went, no goed." },
+      { "mistake": "She didn't went home.", "correction": "She didn't go home.", "explanation": "Después de didn't el verbo vuelve a su forma base, sin -ed." },
+      { "mistake": "Did you went there?", "correction": "Did you go there?", "explanation": "En preguntas con did, el verbo principal va en forma base." }
+    ],
+    "timeline": {
+      "shape": "point",
+      "axisPosition": -1,
+      "referenceMoment": "un momento específico y terminado en el pasado (yesterday, in 2019)",
+      "description": "Se dibuja como un punto fijo claramente a la izquierda del presente, porque la acción terminó por completo en ese momento."
+    },
+    "sentences": [
+      {
+        "id": "past_simple_1",
+        "spanish": "Visitamos a mis abuelos el fin de semana pasado.",
+        "blocks": [
+          { "text": "We", "function": "subject" },
+          { "text": "visited", "function": "verb" },
+          { "text": "my grandparents", "function": "complement" },
+          { "text": "last weekend", "function": "time" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "past_simple_2",
+        "spanish": "Ella no terminó el proyecto a tiempo.",
+        "blocks": [
+          { "text": "She", "function": "subject" },
+          { "text": "did not", "function": "auxiliary" },
+          { "text": "finish", "function": "verb" },
+          { "text": "the project", "function": "complement" },
+          { "text": "on time", "function": "time" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "past_simple_3",
+        "spanish": "¿Viste las noticias anoche?",
+        "blocks": [
+          { "text": "Did", "function": "auxiliary" },
+          { "text": "you", "function": "subject" },
+          { "text": "see", "function": "verb" },
+          { "text": "the news", "function": "complement" },
+          { "text": "last night", "function": "time" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "past_simple_4",
+        "spanish": "El año pasado viajé a Colombia.",
+        "blocks": [
+          { "text": "Last year", "function": "time" },
+          { "text": "I", "function": "subject" },
+          { "text": "traveled", "function": "verb" },
+          { "text": "to Colombia", "function": "complement" }
+        ],
+        "endMark": ".",
+        "acceptedOrders": [[1, 2, 3, 0]]
+      },
+      {
+        "id": "past_simple_5",
+        "spanish": "Mi abuela nació en 1950.",
+        "blocks": [
+          { "text": "My grandmother", "function": "subject" },
+          { "text": "was born", "function": "verb" },
+          { "text": "in 1950", "function": "time" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "past_simple_6",
+        "spanish": "¿Terminaste el libro anoche?",
+        "blocks": [
+          { "text": "Did", "function": "auxiliary" },
+          { "text": "you", "function": "subject" },
+          { "text": "finish", "function": "verb" },
+          { "text": "the book", "function": "complement" },
+          { "text": "last night", "function": "time" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "past_simple_7",
+        "spanish": "No compramos nada en el mercado.",
+        "blocks": [
+          { "text": "We", "function": "subject" },
+          { "text": "did not", "function": "auxiliary" },
+          { "text": "buy", "function": "verb" },
+          { "text": "anything", "function": "complement" },
+          { "text": "at the market", "function": "complement" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "past_simple_8",
+        "spanish": "Ellos ganaron el partido el sábado.",
+        "blocks": [
+          { "text": "They", "function": "subject" },
+          { "text": "won", "function": "verb" },
+          { "text": "the match", "function": "complement" },
+          { "text": "on Saturday", "function": "time" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "past_simple_9",
+        "spanish": "¿Fuiste al concierto la semana pasada?",
+        "blocks": [
+          { "text": "Did", "function": "auxiliary" },
+          { "text": "you", "function": "subject" },
+          { "text": "go", "function": "verb" },
+          { "text": "to the concert", "function": "complement" },
+          { "text": "last week", "function": "time" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "past_simple_10",
+        "spanish": "Mi vecino vendió su casa hace un mes.",
+        "blocks": [
+          { "text": "My neighbor", "function": "subject" },
+          { "text": "sold", "function": "verb" },
+          { "text": "his house", "function": "complement" },
+          { "text": "a month ago", "function": "time" }
+        ],
+        "endMark": "."
+      }
+    ],
+    "writingTopics": [
+      "Cuenta qué hiciste el fin de semana pasado.",
+      "Describe un viaje que hiciste alguna vez.",
+      "Escribe sobre un día importante de tu infancia."
+    ]
+  },
+  {
+    "id": "past_continuous",
+    "timeframe": "past",
+    "group": "continuous",
+    "title": "Past Continuous",
+    "formula": {
+      "affirmative": "Subject + was/were + verb-ing",
+      "negative": "Subject + was/were + not + verb-ing",
+      "question": "Was/Were + subject + verb-ing?"
+    },
+    "uses": [
+      "Una acción en progreso en un momento específico del pasado (At 8 pm, I was cooking).",
+      "Una acción interrumpida por otra (I was sleeping when the phone rang).",
+      "Dos acciones simultáneas en el pasado (She was reading while he was cooking)."
+    ],
+    "signalWords": [
+      { "word": "while", "translation": "mientras" },
+      { "word": "when", "translation": "cuando" },
+      { "word": "at that moment", "translation": "en ese momento" },
+      { "word": "at 8 pm yesterday", "translation": "ayer a las 8 pm" },
+      { "word": "all day yesterday", "translation": "todo el día de ayer" }
+    ],
+    "examples": [
+      { "english": "I was studying when you called.", "spanish": "Estaba estudiando cuando llamaste." },
+      { "english": "They weren't listening to the teacher.", "spanish": "Ellos no estaban escuchando al profesor." },
+      { "english": "Were you sleeping at midnight?", "spanish": "¿Estabas durmiendo a medianoche?" }
+    ],
+    "commonMistakes": [
+      { "mistake": "I was study when you called.", "correction": "I was studying when you called.", "explanation": "El verbo principal necesita -ing después de was/were." },
+      { "mistake": "While I cooked, she was cleaning.", "correction": "While I was cooking, she was cleaning.", "explanation": "Para dos acciones simultáneas en progreso, ambas suelen ir en pasado continuo." },
+      { "mistake": "She was not listening when I am talking.", "correction": "She was not listening when I was talking.", "explanation": "Ambas acciones ocurren en el pasado, así que el segundo verbo también debe estar en pasado." }
+    ],
+    "timeline": {
+      "shape": "range",
+      "axisPosition": -1,
+      "referenceMoment": "un momento específico del pasado, con la acción en curso en ese instante",
+      "description": "Se dibuja como un tramo en el pasado, con un punto en medio marcando el momento exacto donde la acción ya estaba en progreso."
+    },
+    "sentences": [
+      {
+        "id": "past_continuous_1",
+        "spanish": "Estaba viendo televisión cuando sonó el teléfono.",
+        "blocks": [
+          { "text": "I", "function": "subject" },
+          { "text": "was", "function": "auxiliary" },
+          { "text": "watching", "function": "verb" },
+          { "text": "TV", "function": "complement" },
+          { "text": "when the phone rang", "function": "connector" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "past_continuous_2",
+        "spanish": "Ellos no estaban trabajando a esa hora.",
+        "blocks": [
+          { "text": "They", "function": "subject" },
+          { "text": "were not", "function": "auxiliary" },
+          { "text": "working", "function": "verb" },
+          { "text": "at that time", "function": "time" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "past_continuous_3",
+        "spanish": "¿Estabas durmiendo cuando llegué?",
+        "blocks": [
+          { "text": "Were", "function": "auxiliary" },
+          { "text": "you", "function": "subject" },
+          { "text": "sleeping", "function": "verb" },
+          { "text": "when I arrived", "function": "connector" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "past_continuous_4",
+        "spanish": "Mientras ella cocinaba, él limpiaba la casa.",
+        "blocks": [
+          { "text": "While she was cooking", "function": "connector" },
+          { "text": "he", "function": "subject" },
+          { "text": "was", "function": "auxiliary" },
+          { "text": "cleaning", "function": "verb" },
+          { "text": "the house", "function": "complement" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "past_continuous_5",
+        "spanish": "Yo manejaba al trabajo cuando empezó a nevar.",
+        "blocks": [
+          { "text": "I", "function": "subject" },
+          { "text": "was", "function": "auxiliary" },
+          { "text": "driving", "function": "verb" },
+          { "text": "to work", "function": "complement" },
+          { "text": "when it started to snow", "function": "connector" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "past_continuous_6",
+        "spanish": "¿Qué estabas haciendo a las diez de la noche?",
+        "blocks": [
+          { "text": "What", "function": "complement" },
+          { "text": "were", "function": "auxiliary" },
+          { "text": "you", "function": "subject" },
+          { "text": "doing", "function": "verb" },
+          { "text": "at ten pm", "function": "time" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "past_continuous_7",
+        "spanish": "Ellos no estaban escuchando música cuando llegamos.",
+        "blocks": [
+          { "text": "They", "function": "subject" },
+          { "text": "were not", "function": "auxiliary" },
+          { "text": "listening to", "function": "verb" },
+          { "text": "music", "function": "complement" },
+          { "text": "when we arrived", "function": "connector" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "past_continuous_8",
+        "spanish": "Mientras yo trabajaba, mis hijos veían televisión.",
+        "blocks": [
+          { "text": "While I was working", "function": "connector" },
+          { "text": "my children", "function": "subject" },
+          { "text": "were", "function": "auxiliary" },
+          { "text": "watching", "function": "verb" },
+          { "text": "TV", "function": "complement" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "past_continuous_9",
+        "spanish": "¿Estaba ella llorando cuando la llamaste?",
+        "blocks": [
+          { "text": "Was", "function": "auxiliary" },
+          { "text": "she", "function": "subject" },
+          { "text": "crying", "function": "verb" },
+          { "text": "when you called her", "function": "connector" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "past_continuous_10",
+        "spanish": "El teléfono estaba sonando cuando salí de la ducha.",
+        "blocks": [
+          { "text": "The phone", "function": "subject" },
+          { "text": "was", "function": "auxiliary" },
+          { "text": "ringing", "function": "verb" },
+          { "text": "when I got out of the shower", "function": "connector" }
+        ],
+        "endMark": "."
+      }
+    ],
+    "writingTopics": [
+      "Describe qué estabas haciendo ayer a esta misma hora.",
+      "Cuenta una historia sobre algo que pasó mientras hacías otra cosa.",
+      "Describe lo que estaba pasando a tu alrededor durante un evento importante."
+    ]
+  },
+  {
+    "id": "past_perfect",
+    "timeframe": "past",
+    "group": "perfect",
+    "title": "Past Perfect",
+    "formula": {
+      "affirmative": "Subject + had + past participle",
+      "negative": "Subject + had + not + past participle",
+      "question": "Had + subject + past participle?"
+    },
+    "uses": [
+      "Una acción pasada que ocurrió antes de otra acción pasada (I had eaten before you arrived).",
+      "La primera de dos acciones en una historia (By the time she arrived, the movie had started).",
+      "Arrepentimientos o condiciones sobre el pasado (If I had known, I would have come)."
+    ],
+    "signalWords": [
+      { "word": "before", "translation": "antes" },
+      { "word": "after", "translation": "después" },
+      { "word": "by the time", "translation": "para cuando" },
+      { "word": "already", "translation": "ya (en pasado)" },
+      { "word": "never", "translation": "nunca (en pasado)" },
+      { "word": "when", "translation": "cuando" }
+    ],
+    "examples": [
+      { "english": "I had already eaten when they arrived.", "spanish": "Ya había comido cuando ellos llegaron." },
+      { "english": "She hadn't finished her homework before dinner.", "spanish": "Ella no había terminado su tarea antes de la cena." },
+      { "english": "Had you met him before the conference?", "spanish": "¿Lo habías conocido antes de la conferencia?" }
+    ],
+    "commonMistakes": [
+      { "mistake": "When I arrived, she left.", "correction": "When I arrived, she had left.", "explanation": "Para mostrar que una acción pasada ocurrió antes que otra, la primera va en past perfect." },
+      { "mistake": "I had saw that movie before.", "correction": "I had seen that movie before.", "explanation": "Después de had se usa el participio pasado (seen), no el pasado simple (saw)." },
+      { "mistake": "She had not finish the report.", "correction": "She had not finished the report.", "explanation": "El verbo principal después de had not debe estar en participio pasado." }
+    ],
+    "timeline": {
+      "shape": "point",
+      "axisPosition": -2,
+      "referenceMoment": "un momento del pasado, anterior a otro momento también pasado",
+      "description": "Se dibuja como un punto más a la izquierda que otro punto del pasado, con una flecha que conecta ambos para mostrar cuál ocurrió primero."
+    },
+    "sentences": [
+      {
+        "id": "past_perfect_1",
+        "spanish": "Ya había comido cuando llegaron mis amigos.",
+        "blocks": [
+          { "text": "I", "function": "subject" },
+          { "text": "had", "function": "auxiliary" },
+          { "text": "already eaten", "function": "verb" },
+          { "text": "when my friends arrived", "function": "connector" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "past_perfect_2",
+        "spanish": "Ella no había viajado nunca antes de ese año.",
+        "blocks": [
+          { "text": "She", "function": "subject" },
+          { "text": "had not", "function": "auxiliary" },
+          { "text": "traveled", "function": "verb" },
+          { "text": "before that year", "function": "time" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "past_perfect_3",
+        "spanish": "¿Habías terminado el informe antes de la reunión?",
+        "blocks": [
+          { "text": "Had", "function": "auxiliary" },
+          { "text": "you", "function": "subject" },
+          { "text": "finished", "function": "verb" },
+          { "text": "the report", "function": "complement" },
+          { "text": "before the meeting", "function": "time" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "past_perfect_4",
+        "spanish": "Para cuando llegó la policía, el ladrón ya se había escapado.",
+        "blocks": [
+          { "text": "By the time the police arrived", "function": "connector" },
+          { "text": "the thief", "function": "subject" },
+          { "text": "had", "function": "auxiliary" },
+          { "text": "already escaped", "function": "verb" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "past_perfect_5",
+        "spanish": "Cuando llegamos al cine, la película ya había empezado.",
+        "blocks": [
+          { "text": "When we arrived at the cinema", "function": "connector" },
+          { "text": "the movie", "function": "subject" },
+          { "text": "had", "function": "auxiliary" },
+          { "text": "already started", "function": "verb" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "past_perfect_6",
+        "spanish": "¿Habías estudiado francés antes de mudarte a París?",
+        "blocks": [
+          { "text": "Had", "function": "auxiliary" },
+          { "text": "you", "function": "subject" },
+          { "text": "studied", "function": "verb" },
+          { "text": "French", "function": "complement" },
+          { "text": "before you moved to Paris", "function": "connector" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "past_perfect_7",
+        "spanish": "Ella no había probado nunca ese plato antes de esa noche.",
+        "blocks": [
+          { "text": "She", "function": "subject" },
+          { "text": "had not", "function": "auxiliary" },
+          { "text": "tried", "function": "verb" },
+          { "text": "that dish", "function": "complement" },
+          { "text": "before that night", "function": "time" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "past_perfect_8",
+        "spanish": "Ellos ya habían comprado los boletos cuando bajó el precio.",
+        "blocks": [
+          { "text": "They", "function": "subject" },
+          { "text": "had", "function": "auxiliary" },
+          { "text": "already bought", "function": "verb" },
+          { "text": "the tickets", "function": "complement" },
+          { "text": "when the price dropped", "function": "connector" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "past_perfect_9",
+        "spanish": "¿Había terminado el equipo el proyecto antes de la fecha límite?",
+        "blocks": [
+          { "text": "Had", "function": "auxiliary" },
+          { "text": "the team", "function": "subject" },
+          { "text": "finished", "function": "verb" },
+          { "text": "the project", "function": "complement" },
+          { "text": "before the deadline", "function": "time" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "past_perfect_10",
+        "spanish": "No habíamos visto nunca tanta nieve.",
+        "blocks": [
+          { "text": "We", "function": "subject" },
+          { "text": "had never", "function": "auxiliary" },
+          { "text": "seen", "function": "verb" },
+          { "text": "so much snow", "function": "complement" }
+        ],
+        "endMark": "."
+      }
+    ],
+    "writingTopics": [
+      "Cuenta una historia sobre algo que ya había pasado antes de que llegaras a un lugar.",
+      "Describe qué había cambiado en tu vida antes de cumplir 18 años.",
+      "Escribe sobre una situación donde una cosa pasó antes que otra."
+    ]
+  },
+  {
+    "id": "past_perfect_continuous",
+    "timeframe": "past",
+    "group": "perfect_continuous",
+    "title": "Past Perfect Continuous",
+    "formula": {
+      "affirmative": "Subject + had + been + verb-ing",
+      "negative": "Subject + had + not + been + verb-ing",
+      "question": "Had + subject + been + verb-ing?"
+    },
+    "uses": [
+      "Una acción en progreso antes de otro momento o acción pasada, con énfasis en la duración (I had been working there for years before I quit).",
+      "La causa de una situación pasada (He was tired because he had been running).",
+      "Acciones que continuaron hasta justo antes de que algo las interrumpiera."
+    ],
+    "signalWords": [
+      { "word": "for", "translation": "durante / por" },
+      { "word": "since", "translation": "desde" },
+      { "word": "before", "translation": "antes" },
+      { "word": "by the time", "translation": "para cuando" },
+      { "word": "how long", "translation": "cuánto tiempo" }
+    ],
+    "examples": [
+      { "english": "I had been studying for two hours when the power went out.", "spanish": "Había estado estudiando por dos horas cuando se fue la luz." },
+      { "english": "She hadn't been feeling well before the trip.", "spanish": "Ella no se había estado sintiendo bien antes del viaje." },
+      { "english": "Had they been waiting long before the bus arrived?", "spanish": "¿Habían estado esperando mucho antes de que llegara el autobús?" }
+    ],
+    "commonMistakes": [
+      { "mistake": "I had been study for hours.", "correction": "I had been studying for hours.", "explanation": "Después de been va el verbo con -ing, no la forma base." },
+      { "mistake": "He was tired because he had run all day.", "correction": "He was tired because he had been running all day.", "explanation": "Para enfatizar la duración de la causa se usa past perfect continuous, no solo past perfect." },
+      { "mistake": "She had been work there since 2015.", "correction": "She had been working there since 2015.", "explanation": "Falta la terminación -ing en el verbo principal." }
+    ],
+    "timeline": {
+      "shape": "range",
+      "axisPosition": -2,
+      "referenceMoment": "un tramo en el pasado, justo antes de otro momento pasado",
+      "description": "Se dibuja como un tramo grueso ubicado antes de un punto de referencia pasado, mostrando la duración de la acción previa."
+    },
+    "sentences": [
+      {
+        "id": "past_perfect_continuous_1",
+        "spanish": "Había estado lloviendo toda la noche antes de que saliéramos.",
+        "blocks": [
+          { "text": "It", "function": "subject" },
+          { "text": "had been", "function": "auxiliary" },
+          { "text": "raining", "function": "verb" },
+          { "text": "all night", "function": "time" },
+          { "text": "before we left", "function": "connector" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "past_perfect_continuous_2",
+        "spanish": "Ellos no habían estado durmiendo bien antes del examen.",
+        "blocks": [
+          { "text": "They", "function": "subject" },
+          { "text": "had not been", "function": "auxiliary" },
+          { "text": "sleeping", "function": "verb" },
+          { "text": "well", "function": "adverb" },
+          { "text": "before the exam", "function": "time" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "past_perfect_continuous_3",
+        "spanish": "¿Habías estado esperando mucho tiempo cuando llegué?",
+        "blocks": [
+          { "text": "Had", "function": "auxiliary" },
+          { "text": "you", "function": "subject" },
+          { "text": "been waiting", "function": "verb" },
+          { "text": "long", "function": "adverb" },
+          { "text": "when I arrived", "function": "connector" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "past_perfect_continuous_4",
+        "spanish": "Estaba agotado porque había estado corriendo todo el día.",
+        "blocks": [
+          { "text": "He", "function": "subject" },
+          { "text": "was", "function": "auxiliary" },
+          { "text": "exhausted", "function": "complement" },
+          { "text": "because he had been running", "function": "connector" },
+          { "text": "all day", "function": "time" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "past_perfect_continuous_5",
+        "spanish": "Habíamos estado viajando por diez horas cuando finalmente llegamos.",
+        "blocks": [
+          { "text": "We", "function": "subject" },
+          { "text": "had been", "function": "auxiliary" },
+          { "text": "traveling", "function": "verb" },
+          { "text": "for ten hours", "function": "time" },
+          { "text": "when we finally arrived", "function": "connector" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "past_perfect_continuous_6",
+        "spanish": "¿Habías estado estudiando toda la noche antes del examen?",
+        "blocks": [
+          { "text": "Had", "function": "auxiliary" },
+          { "text": "you", "function": "subject" },
+          { "text": "been studying", "function": "verb" },
+          { "text": "all night", "function": "time" },
+          { "text": "before the exam", "function": "time" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "past_perfect_continuous_7",
+        "spanish": "Ella no había estado comiendo bien antes de enfermarse.",
+        "blocks": [
+          { "text": "She", "function": "subject" },
+          { "text": "had not been", "function": "auxiliary" },
+          { "text": "eating", "function": "verb" },
+          { "text": "well", "function": "adverb" },
+          { "text": "before she got sick", "function": "connector" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "past_perfect_continuous_8",
+        "spanish": "Habían estado discutiendo por horas antes de llegar a un acuerdo.",
+        "blocks": [
+          { "text": "They", "function": "subject" },
+          { "text": "had been", "function": "auxiliary" },
+          { "text": "arguing", "function": "verb" },
+          { "text": "for hours", "function": "time" },
+          { "text": "before they reached an agreement", "function": "connector" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "past_perfect_continuous_9",
+        "spanish": "¿Cuánto tiempo habías estado viviendo allí antes de mudarte?",
+        "blocks": [
+          { "text": "How long", "function": "time" },
+          { "text": "had", "function": "auxiliary" },
+          { "text": "you", "function": "subject" },
+          { "text": "been living", "function": "verb" },
+          { "text": "there", "function": "complement" },
+          { "text": "before you moved", "function": "connector" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "past_perfect_continuous_10",
+        "spanish": "El motor se sobrecalentó porque había estado funcionando sin descanso.",
+        "blocks": [
+          { "text": "The engine", "function": "subject" },
+          { "text": "overheated", "function": "verb" },
+          { "text": "because it had been running", "function": "connector" },
+          { "text": "nonstop", "function": "adverb" }
+        ],
+        "endMark": "."
+      }
+    ],
+    "writingTopics": [
+      "Explica qué habías estado haciendo antes de un evento importante en tu vida.",
+      "Describe la causa de una emoción o cansancio que sentiste en el pasado.",
+      "Escribe sobre algo que llevabas tiempo haciendo antes de que cambiara tu situación."
+    ]
+  },
+  {
+    "id": "future_simple",
+    "timeframe": "future",
+    "group": "simple",
+    "title": "Future Simple (will)",
+    "formula": {
+      "affirmative": "Subject + will + verb (forma base)",
+      "negative": "Subject + will + not (won't) + verb (forma base)",
+      "question": "Will + subject + verb (forma base)?"
+    },
+    "uses": [
+      "Predicciones sobre el futuro (It will rain tomorrow).",
+      "Decisiones espontáneas tomadas en el momento de hablar (I'll answer the phone).",
+      "Promesas y ofrecimientos (I will help you).",
+      "Hechos futuros sin control del hablante (The sun will rise at 6 am)."
+    ],
+    "signalWords": [
+      { "word": "tomorrow", "translation": "mañana" },
+      { "word": "next week", "translation": "la próxima semana" },
+      { "word": "next year", "translation": "el próximo año" },
+      { "word": "soon", "translation": "pronto" },
+      { "word": "in the future", "translation": "en el futuro" },
+      { "word": "probably", "translation": "probablemente" }
+    ],
+    "examples": [
+      { "english": "I will call you tomorrow.", "spanish": "Te llamaré mañana." },
+      { "english": "She won't be late.", "spanish": "Ella no llegará tarde." },
+      { "english": "Will you help me with this?", "spanish": "¿Me ayudarás con esto?" }
+    ],
+    "commonMistakes": [
+      { "mistake": "I will to call you.", "correction": "I will call you.", "explanation": "Después de will el verbo va en forma base, sin 'to'." },
+      { "mistake": "She wills come tomorrow.", "correction": "She will come tomorrow.", "explanation": "Will no cambia de forma según el sujeto; nunca lleva -s." },
+      { "mistake": "Will you to help me?", "correction": "Will you help me?", "explanation": "No se usa 'to' después de will, ni siquiera en preguntas." }
+    ],
+    "timeline": {
+      "shape": "point",
+      "axisPosition": 1,
+      "referenceMoment": "un momento del futuro, a veces sin fecha exacta",
+      "description": "Se dibuja como un punto a la derecha del presente, representando algo que todavía no ha pasado."
+    },
+    "sentences": [
+      {
+        "id": "future_simple_1",
+        "spanish": "Llamaré a mi mamá mañana.",
+        "blocks": [
+          { "text": "I", "function": "subject" },
+          { "text": "will", "function": "auxiliary" },
+          { "text": "call", "function": "verb" },
+          { "text": "my mom", "function": "complement" },
+          { "text": "tomorrow", "function": "time" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "future_simple_2",
+        "spanish": "Ellos no llegarán a tiempo.",
+        "blocks": [
+          { "text": "They", "function": "subject" },
+          { "text": "will not", "function": "auxiliary" },
+          { "text": "arrive", "function": "verb" },
+          { "text": "on time", "function": "time" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "future_simple_3",
+        "spanish": "¿Vendrás a la fiesta el sábado?",
+        "blocks": [
+          { "text": "Will", "function": "auxiliary" },
+          { "text": "you", "function": "subject" },
+          { "text": "come", "function": "verb" },
+          { "text": "to the party", "function": "complement" },
+          { "text": "on Saturday", "function": "time" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "future_simple_4",
+        "spanish": "Probablemente ella ganará el premio.",
+        "blocks": [
+          { "text": "She", "function": "subject" },
+          { "text": "will probably", "function": "adverb" },
+          { "text": "win", "function": "verb" },
+          { "text": "the prize", "function": "complement" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "future_simple_5",
+        "spanish": "No llegaremos a tiempo si no salimos ahora.",
+        "blocks": [
+          { "text": "We", "function": "subject" },
+          { "text": "will not", "function": "auxiliary" },
+          { "text": "arrive", "function": "verb" },
+          { "text": "on time", "function": "time" },
+          { "text": "if we don't leave now", "function": "connector" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "future_simple_6",
+        "spanish": "¿Me ayudarás a mudarme el sábado?",
+        "blocks": [
+          { "text": "Will", "function": "auxiliary" },
+          { "text": "you", "function": "subject" },
+          { "text": "help", "function": "verb" },
+          { "text": "me move", "function": "complement" },
+          { "text": "on Saturday", "function": "time" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "future_simple_7",
+        "spanish": "Creo que ella aceptará el trabajo.",
+        "blocks": [
+          { "text": "I think", "function": "connector" },
+          { "text": "she", "function": "subject" },
+          { "text": "will", "function": "auxiliary" },
+          { "text": "accept", "function": "verb" },
+          { "text": "the job", "function": "complement" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "future_simple_8",
+        "spanish": "El equipo no ganará sin su mejor jugador.",
+        "blocks": [
+          { "text": "The team", "function": "subject" },
+          { "text": "will not", "function": "auxiliary" },
+          { "text": "win", "function": "verb" },
+          { "text": "without their best player", "function": "complement" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "future_simple_9",
+        "spanish": "¿Viajarán ustedes a Europa el próximo verano?",
+        "blocks": [
+          { "text": "Will", "function": "auxiliary" },
+          { "text": "you", "function": "subject" },
+          { "text": "travel", "function": "verb" },
+          { "text": "to Europe", "function": "complement" },
+          { "text": "next summer", "function": "time" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "future_simple_10",
+        "spanish": "Pronto tendremos buenas noticias.",
+        "blocks": [
+          { "text": "Soon", "function": "time" },
+          { "text": "we", "function": "subject" },
+          { "text": "will", "function": "auxiliary" },
+          { "text": "have", "function": "verb" },
+          { "text": "good news", "function": "complement" }
+        ],
+        "endMark": "."
+      }
+    ],
+    "writingTopics": [
+      "Escribe tres predicciones sobre tu vida dentro de diez años.",
+      "Haz una promesa a alguien importante para ti.",
+      "Describe tus planes para el próximo fin de semana."
+    ]
+  },
+  {
+    "id": "future_continuous",
+    "timeframe": "future",
+    "group": "continuous",
+    "title": "Future Continuous",
+    "formula": {
+      "affirmative": "Subject + will + be + verb-ing",
+      "negative": "Subject + will + not + be + verb-ing",
+      "question": "Will + subject + be + verb-ing?"
+    },
+    "uses": [
+      "Una acción que estará en progreso en un momento específico del futuro (At 9 pm, I will be sleeping).",
+      "Planes ya organizados que se verán como algo normal en el futuro (I'll be traveling next month).",
+      "Preguntas corteses sobre los planes de alguien (Will you be using the car tonight?)."
+    ],
+    "signalWords": [
+      { "word": "at this time tomorrow", "translation": "a esta hora mañana" },
+      { "word": "this time next week", "translation": "a esta hora la próxima semana" },
+      { "word": "by then", "translation": "para entonces" },
+      { "word": "while", "translation": "mientras" }
+    ],
+    "examples": [
+      { "english": "This time tomorrow, I will be flying to Madrid.", "spanish": "A esta hora mañana, estaré volando a Madrid." },
+      { "english": "They won't be working on Sunday.", "spanish": "Ellos no estarán trabajando el domingo." },
+      { "english": "Will you be using the kitchen at 7?", "spanish": "¿Vas a estar usando la cocina a las 7?" }
+    ],
+    "commonMistakes": [
+      { "mistake": "I will sleeping at that time.", "correction": "I will be sleeping at that time.", "explanation": "Falta el verbo be entre will y el verbo principal con -ing." },
+      { "mistake": "She will be work tomorrow at 9.", "correction": "She will be working tomorrow at 9.", "explanation": "El verbo principal necesita la terminación -ing después de will be." },
+      { "mistake": "Will be you waiting for me?", "correction": "Will you be waiting for me?", "explanation": "El sujeto va entre will y be, no después de be." }
+    ],
+    "timeline": {
+      "shape": "range",
+      "axisPosition": 1,
+      "referenceMoment": "un momento específico del futuro, con la acción en curso en ese instante",
+      "description": "Se dibuja como un tramo a la derecha del presente, con un punto marcando el instante futuro exacto donde la acción ya estará ocurriendo."
+    },
+    "sentences": [
+      {
+        "id": "future_continuous_1",
+        "spanish": "A esta hora mañana, estaré viajando a Bogotá.",
+        "blocks": [
+          { "text": "This time tomorrow", "function": "time" },
+          { "text": "I", "function": "subject" },
+          { "text": "will be", "function": "auxiliary" },
+          { "text": "traveling", "function": "verb" },
+          { "text": "to Bogota", "function": "complement" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "future_continuous_2",
+        "spanish": "Ellos no estarán trabajando el próximo lunes.",
+        "blocks": [
+          { "text": "They", "function": "subject" },
+          { "text": "will not be", "function": "auxiliary" },
+          { "text": "working", "function": "verb" },
+          { "text": "next Monday", "function": "time" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "future_continuous_3",
+        "spanish": "¿Estarás usando el carro esta noche?",
+        "blocks": [
+          { "text": "Will", "function": "auxiliary" },
+          { "text": "you", "function": "subject" },
+          { "text": "be using", "function": "verb" },
+          { "text": "the car", "function": "complement" },
+          { "text": "tonight", "function": "time" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "future_continuous_4",
+        "spanish": "A las ocho, ella estará cocinando la cena.",
+        "blocks": [
+          { "text": "At eight o'clock", "function": "time" },
+          { "text": "she", "function": "subject" },
+          { "text": "will be", "function": "auxiliary" },
+          { "text": "cooking", "function": "verb" },
+          { "text": "dinner", "function": "complement" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "future_continuous_5",
+        "spanish": "A las siete, estaré manejando hacia el aeropuerto.",
+        "blocks": [
+          { "text": "At seven o'clock", "function": "time" },
+          { "text": "I", "function": "subject" },
+          { "text": "will be", "function": "auxiliary" },
+          { "text": "driving", "function": "verb" },
+          { "text": "to the airport", "function": "complement" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "future_continuous_6",
+        "spanish": "¿Estarán ellos durmiendo cuando lleguemos?",
+        "blocks": [
+          { "text": "Will", "function": "auxiliary" },
+          { "text": "they", "function": "subject" },
+          { "text": "be sleeping", "function": "verb" },
+          { "text": "when we arrive", "function": "connector" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "future_continuous_7",
+        "spanish": "No estaré trabajando el próximo viernes.",
+        "blocks": [
+          { "text": "I", "function": "subject" },
+          { "text": "will not be", "function": "auxiliary" },
+          { "text": "working", "function": "verb" },
+          { "text": "next Friday", "function": "time" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "future_continuous_8",
+        "spanish": "Mientras tú estudias, yo estaré preparando la cena.",
+        "blocks": [
+          { "text": "While you study", "function": "connector" },
+          { "text": "I", "function": "subject" },
+          { "text": "will be", "function": "auxiliary" },
+          { "text": "preparing", "function": "verb" },
+          { "text": "dinner", "function": "complement" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "future_continuous_9",
+        "spanish": "¿Estarás viviendo todavía en esta ciudad el próximo año?",
+        "blocks": [
+          { "text": "Will", "function": "auxiliary" },
+          { "text": "you", "function": "subject" },
+          { "text": "still be living", "function": "verb" },
+          { "text": "in this city", "function": "complement" },
+          { "text": "next year", "function": "time" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "future_continuous_10",
+        "spanish": "Esta vez el próximo mes, estaremos celebrando nuestro aniversario.",
+        "blocks": [
+          { "text": "This time next month", "function": "time" },
+          { "text": "we", "function": "subject" },
+          { "text": "will be", "function": "auxiliary" },
+          { "text": "celebrating", "function": "verb" },
+          { "text": "our anniversary", "function": "complement" }
+        ],
+        "endMark": "."
+      }
+    ],
+    "writingTopics": [
+      "Describe qué estarás haciendo a esta hora mañana.",
+      "Escribe sobre tus planes para dentro de un mes.",
+      "Imagina un día típico dentro de cinco años y descríbelo hora por hora."
+    ]
+  },
+  {
+    "id": "future_perfect",
+    "timeframe": "future",
+    "group": "perfect",
+    "title": "Future Perfect",
+    "formula": {
+      "affirmative": "Subject + will + have + past participle",
+      "negative": "Subject + will + not + have + past participle",
+      "question": "Will + subject + have + past participle?"
+    },
+    "uses": [
+      "Una acción que estará terminada antes de un momento específico del futuro (By 2030, I will have finished my degree).",
+      "Predicciones sobre algo que ya habrá pasado en el futuro (She will have left by the time you arrive)."
+    ],
+    "signalWords": [
+      { "word": "by then", "translation": "para entonces" },
+      { "word": "by next year", "translation": "para el próximo año" },
+      { "word": "by the time", "translation": "para cuando" },
+      { "word": "before", "translation": "antes" }
+    ],
+    "examples": [
+      { "english": "By next year, I will have saved enough money.", "spanish": "Para el próximo año, habré ahorrado suficiente dinero." },
+      { "english": "They won't have finished the project by Friday.", "spanish": "Ellos no habrán terminado el proyecto para el viernes." },
+      { "english": "Will you have graduated by then?", "spanish": "¿Te habrás graduado para entonces?" }
+    ],
+    "commonMistakes": [
+      { "mistake": "By 2030, I will finished my degree.", "correction": "By 2030, I will have finished my degree.", "explanation": "Falta el auxiliar have entre will y el participio pasado." },
+      { "mistake": "She will have leave by 5 pm.", "correction": "She will have left by 5 pm.", "explanation": "Después de have se usa el participio pasado (left), no la forma base." },
+      { "mistake": "Will have you finished by then?", "correction": "Will you have finished by then?", "explanation": "El sujeto va entre will y have, no después de have." }
+    ],
+    "timeline": {
+      "shape": "point",
+      "axisPosition": 2,
+      "referenceMoment": "un punto del futuro, visto como terminado antes de otro momento futuro",
+      "description": "Se dibuja como un punto futuro con una flecha que llega hasta él desde antes, mostrando que la acción ya estará completa para ese momento."
+    },
+    "sentences": [
+      {
+        "id": "future_perfect_1",
+        "spanish": "Para el próximo año, habré terminado la universidad.",
+        "blocks": [
+          { "text": "By next year", "function": "time" },
+          { "text": "I", "function": "subject" },
+          { "text": "will have", "function": "auxiliary" },
+          { "text": "finished", "function": "verb" },
+          { "text": "university", "function": "complement" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "future_perfect_2",
+        "spanish": "Ellos no habrán llegado para las ocho.",
+        "blocks": [
+          { "text": "They", "function": "subject" },
+          { "text": "will not have", "function": "auxiliary" },
+          { "text": "arrived", "function": "verb" },
+          { "text": "by eight", "function": "time" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "future_perfect_3",
+        "spanish": "¿Te habrás ido antes de que yo llegue?",
+        "blocks": [
+          { "text": "Will", "function": "auxiliary" },
+          { "text": "you", "function": "subject" },
+          { "text": "have left", "function": "verb" },
+          { "text": "before I arrive", "function": "connector" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "future_perfect_4",
+        "spanish": "Para 2030, los científicos habrán descubierto una cura.",
+        "blocks": [
+          { "text": "By 2030", "function": "time" },
+          { "text": "scientists", "function": "subject" },
+          { "text": "will have", "function": "auxiliary" },
+          { "text": "discovered", "function": "verb" },
+          { "text": "a cure", "function": "complement" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "future_perfect_5",
+        "spanish": "Para fin de año, habré ahorrado lo suficiente para el carro.",
+        "blocks": [
+          { "text": "By the end of the year", "function": "time" },
+          { "text": "I", "function": "subject" },
+          { "text": "will have", "function": "auxiliary" },
+          { "text": "saved", "function": "verb" },
+          { "text": "enough for the car", "function": "complement" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "future_perfect_6",
+        "spanish": "¿Habrá terminado ella la maestría para 2027?",
+        "blocks": [
+          { "text": "Will", "function": "auxiliary" },
+          { "text": "she", "function": "subject" },
+          { "text": "have finished", "function": "verb" },
+          { "text": "her master's degree", "function": "complement" },
+          { "text": "by 2027", "function": "time" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "future_perfect_7",
+        "spanish": "No habremos vendido la casa para esa fecha.",
+        "blocks": [
+          { "text": "We", "function": "subject" },
+          { "text": "will not have", "function": "auxiliary" },
+          { "text": "sold", "function": "verb" },
+          { "text": "the house", "function": "complement" },
+          { "text": "by that date", "function": "time" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "future_perfect_8",
+        "spanish": "Para las cinco, el equipo habrá entregado el reporte.",
+        "blocks": [
+          { "text": "By five o'clock", "function": "time" },
+          { "text": "the team", "function": "subject" },
+          { "text": "will have", "function": "auxiliary" },
+          { "text": "submitted", "function": "verb" },
+          { "text": "the report", "function": "complement" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "future_perfect_9",
+        "spanish": "¿Habrán llegado ellos antes de que empiece la ceremonia?",
+        "blocks": [
+          { "text": "Will", "function": "auxiliary" },
+          { "text": "they", "function": "subject" },
+          { "text": "have arrived", "function": "verb" },
+          { "text": "before the ceremony starts", "function": "connector" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "future_perfect_10",
+        "spanish": "Para el 2040, muchos trabajos habrán cambiado por completo.",
+        "blocks": [
+          { "text": "By 2040", "function": "time" },
+          { "text": "many jobs", "function": "subject" },
+          { "text": "will have", "function": "auxiliary" },
+          { "text": "changed", "function": "verb" },
+          { "text": "completely", "function": "adverb" }
+        ],
+        "endMark": "."
+      }
+    ],
+    "writingTopics": [
+      "Escribe qué metas habrás logrado dentro de cinco años.",
+      "Describe qué habrá cambiado en el mundo para el año 2050.",
+      "Imagina qué habrás terminado antes de que acabe este mes."
+    ]
+  },
+  {
+    "id": "future_perfect_continuous",
+    "timeframe": "future",
+    "group": "perfect_continuous",
+    "title": "Future Perfect Continuous",
+    "formula": {
+      "affirmative": "Subject + will + have + been + verb-ing",
+      "negative": "Subject + will + not + have + been + verb-ing",
+      "question": "Will + subject + have + been + verb-ing?"
+    },
+    "uses": [
+      "La duración de una acción que seguirá en curso hasta un momento futuro específico (By June, I will have been working here for ten years).",
+      "Enfatizar cuánto tiempo habrá durado algo antes de un punto de referencia futuro."
+    ],
+    "signalWords": [
+      { "word": "by then", "translation": "para entonces" },
+      { "word": "by next year", "translation": "para el próximo año" },
+      { "word": "for", "translation": "durante / por" },
+      { "word": "by the time", "translation": "para cuando" },
+      { "word": "how long", "translation": "cuánto tiempo" }
+    ],
+    "examples": [
+      { "english": "By December, she will have been living here for a decade.", "spanish": "Para diciembre, ella habrá estado viviendo aquí por una década." },
+      { "english": "We won't have been waiting long when the train arrives.", "spanish": "No habremos estado esperando mucho cuando llegue el tren." },
+      { "english": "Will you have been studying for three hours by noon?", "spanish": "¿Habrás estado estudiando por tres horas para el mediodía?" }
+    ],
+    "commonMistakes": [
+      { "mistake": "I will have working here for ten years.", "correction": "I will have been working here for ten years.", "explanation": "Falta el verbo been entre have y el verbo principal con -ing." },
+      { "mistake": "She will have been study for hours by then.", "correction": "She will have been studying for hours by then.", "explanation": "El verbo principal necesita -ing después de have been." },
+      { "mistake": "By June, I have been working here for ten years.", "correction": "By June, I will have been working here for ten years.", "explanation": "Para hablar de una duración que llega hasta un punto futuro se necesita will have been, no solo have been." }
+    ],
+    "timeline": {
+      "shape": "range",
+      "axisPosition": 2,
+      "referenceMoment": "un tramo largo que termina en un punto específico del futuro",
+      "description": "Se dibuja como el tramo más largo de todos, empezando en el pasado o presente y extendiéndose hasta un punto futuro de referencia, resaltando la duración total."
+    },
+    "sentences": [
+      {
+        "id": "future_perfect_continuous_1",
+        "spanish": "Para junio, habré estado trabajando aquí por diez años.",
+        "blocks": [
+          { "text": "By June", "function": "time" },
+          { "text": "I", "function": "subject" },
+          { "text": "will have been", "function": "auxiliary" },
+          { "text": "working", "function": "verb" },
+          { "text": "here", "function": "complement" },
+          { "text": "for ten years", "function": "time" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "future_perfect_continuous_2",
+        "spanish": "Ellos no habrán estado esperando mucho tiempo cuando lleguemos.",
+        "blocks": [
+          { "text": "They", "function": "subject" },
+          { "text": "will not have been", "function": "auxiliary" },
+          { "text": "waiting", "function": "verb" },
+          { "text": "long", "function": "adverb" },
+          { "text": "when we arrive", "function": "connector" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "future_perfect_continuous_3",
+        "spanish": "¿Habrás estado estudiando por tres horas para el mediodía?",
+        "blocks": [
+          { "text": "Will", "function": "auxiliary" },
+          { "text": "you", "function": "subject" },
+          { "text": "have been studying", "function": "verb" },
+          { "text": "for three hours", "function": "time" },
+          { "text": "by noon", "function": "time" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "future_perfect_continuous_4",
+        "spanish": "Para 2030, ella habrá estado enseñando inglés por veinte años.",
+        "blocks": [
+          { "text": "By 2030", "function": "time" },
+          { "text": "she", "function": "subject" },
+          { "text": "will have been", "function": "auxiliary" },
+          { "text": "teaching", "function": "verb" },
+          { "text": "English", "function": "complement" },
+          { "text": "for twenty years", "function": "time" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "future_perfect_continuous_5",
+        "spanish": "Para diciembre, habré estado estudiando inglés por dos años.",
+        "blocks": [
+          { "text": "By December", "function": "time" },
+          { "text": "I", "function": "subject" },
+          { "text": "will have been", "function": "auxiliary" },
+          { "text": "studying", "function": "verb" },
+          { "text": "English", "function": "complement" },
+          { "text": "for two years", "function": "time" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "future_perfect_continuous_6",
+        "spanish": "¿Habrá estado ella trabajando aquí por una década para su retiro?",
+        "blocks": [
+          { "text": "Will", "function": "auxiliary" },
+          { "text": "she", "function": "subject" },
+          { "text": "have been working", "function": "verb" },
+          { "text": "here", "function": "complement" },
+          { "text": "for a decade", "function": "time" },
+          { "text": "by her retirement", "function": "time" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "future_perfect_continuous_7",
+        "spanish": "No habremos estado descansando mucho para entonces.",
+        "blocks": [
+          { "text": "We", "function": "subject" },
+          { "text": "will not have been", "function": "auxiliary" },
+          { "text": "resting", "function": "verb" },
+          { "text": "much", "function": "adverb" },
+          { "text": "by then", "function": "time" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "future_perfect_continuous_8",
+        "spanish": "Para el próximo trimestre, el equipo habrá estado desarrollando el producto por seis meses.",
+        "blocks": [
+          { "text": "By next quarter", "function": "time" },
+          { "text": "the team", "function": "subject" },
+          { "text": "will have been", "function": "auxiliary" },
+          { "text": "developing", "function": "verb" },
+          { "text": "the product", "function": "complement" },
+          { "text": "for six months", "function": "time" }
+        ],
+        "endMark": "."
+      },
+      {
+        "id": "future_perfect_continuous_9",
+        "spanish": "¿Habrán estado ahorrando suficiente dinero para comprar la casa?",
+        "blocks": [
+          { "text": "Will", "function": "auxiliary" },
+          { "text": "they", "function": "subject" },
+          { "text": "have been saving", "function": "verb" },
+          { "text": "enough money", "function": "complement" },
+          { "text": "to buy the house", "function": "complement" }
+        ],
+        "endMark": "?"
+      },
+      {
+        "id": "future_perfect_continuous_10",
+        "spanish": "Para su aniversario número cincuenta, habrán estado casados por medio siglo.",
+        "blocks": [
+          { "text": "By their fiftieth anniversary", "function": "time" },
+          { "text": "they", "function": "subject" },
+          { "text": "will have been", "function": "auxiliary" },
+          { "text": "married", "function": "verb" },
+          { "text": "for half a century", "function": "time" }
+        ],
+        "endMark": "."
+      }
+    ],
+    "writingTopics": [
+      "Describe cuánto tiempo habrás estado haciendo algo importante para una fecha futura.",
+      "Escribe sobre un logro que habrás estado construyendo durante años.",
+      "Imagina cuánto tiempo habrás estado viviendo en tu ciudad dentro de veinte años."
+    ]
+  }
+]

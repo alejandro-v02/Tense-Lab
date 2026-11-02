@@ -1,0 +1,19 @@
+{
+  "name": "tense-lab",
+  "private": true,
+  "version": "0.0.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@10.30.3",
+  "scripts": {
+    "build": "pnpm -r --filter=./packages/* --filter=./apps/* build",
+    "build:shared": "pnpm --filter @tense-lab/shared build",
+    "dev:api": "pnpm --filter @tense-lab/api start:dev",
+    "dev:web": "pnpm --filter @tense-lab/web dev",
+    "typecheck": "pnpm -r typecheck",
+    "lint": "pnpm -r lint",
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down"
+  }
+}
