@@ -30,19 +30,21 @@ export class AuthService {
   }
 
   async register(email: string, password: string, name: string): Promise<AuthResponse> {
-    const existing = await this.users.findOne({ where: { email } });
+    const normalizedEmail = email.trim().toLowerCase();
+    const normalizedName = name.trim();
+    const existing = await this.users.findOne({ where: { email: normalizedEmail } });
     if (existing) {
       throw new ConflictException("A user with this email already exists");
     }
 
     const passwordHash = await bcrypt.hash(password, SALT_ROUNDS);
-    const user = await this.users.save(this.users.create({ email, passwordHash, name }));
+    const user = await this.users.save(this.users.create({ email: normalizedEmail, passwordHash, name: normalizedName }));
 
     return { token: this.signToken(user), user: this.toPublicUser(user) };
   }
 
   async login(email: string, password: string): Promise<AuthResponse> {
-    const user = await this.users.findOne({ where: { email } });
+    const user = await this.users.findOne({ where: { email: email.trim().toLowerCase() } });
     if (!user || !(await bcrypt.compare(password, user.passwordHash))) {
       throw new UnauthorizedException("Invalid email or password");
     }
