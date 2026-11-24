@@ -34,6 +34,11 @@ export class PracticeService {
 
   private enforceRateLimit(userId: string): void {
     const now = Date.now();
+    for (const [id, timestamps] of this.requestLog) {
+      if (timestamps.every((timestamp) => now - timestamp >= RATE_LIMIT_WINDOW_MS)) {
+        this.requestLog.delete(id);
+      }
+    }
     const timestamps = (this.requestLog.get(userId) ?? []).filter((t) => now - t < RATE_LIMIT_WINDOW_MS);
     if (timestamps.length >= SENTENCE_GENERATION_RATE_LIMIT_PER_MINUTE) {
       throw new HttpException("Demasiadas oraciones seguidas. Esperá un momento.", HttpStatus.TOO_MANY_REQUESTS);
