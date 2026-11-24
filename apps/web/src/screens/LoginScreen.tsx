@@ -24,7 +24,12 @@ export function LoginScreen() {
     setError(null);
     setLoading(true);
     try {
-      const response = mode === "login" ? await api.login(email, password) : await api.register(email, password, name);
+      const normalizedEmail = email.trim().toLowerCase();
+      const normalizedName = name.trim();
+      const response =
+        mode === "login"
+          ? await api.login(normalizedEmail, password)
+          : await api.register(normalizedEmail, password, normalizedName);
       setSession(response.token, response.user);
       navigate("/");
     } catch (err) {
@@ -56,6 +61,7 @@ export function LoginScreen() {
               <input
                 type="text"
                 required
+                autoComplete="name"
                 placeholder="Nombre"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
@@ -65,6 +71,7 @@ export function LoginScreen() {
             <input
               type="email"
               required
+              autoComplete="email"
               placeholder="Correo"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -74,6 +81,7 @@ export function LoginScreen() {
               type="password"
               required
               minLength={8}
+              autoComplete={mode === "login" ? "current-password" : "new-password"}
               placeholder="Contraseña"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
