@@ -76,14 +76,32 @@ export function UnitScreen() {
         </p>
       </GlassCard>
 
-      <div className="mb-6 flex gap-2">
-        <button type="button" onClick={() => setTab("understand")} className={tabClass(tab === "understand")}>
+      <div className="mb-6 flex gap-2" role="tablist" aria-label="Secciones de la unidad">
+        <button
+          type="button"
+          role="tab"
+          aria-selected={tab === "understand"}
+          onClick={() => setTab("understand")}
+          className={tabClass(tab === "understand")}
+        >
           Entender
         </button>
-        <button type="button" onClick={() => setTab("build")} className={tabClass(tab === "build")}>
+        <button
+          type="button"
+          role="tab"
+          aria-selected={tab === "build"}
+          onClick={() => setTab("build")}
+          className={tabClass(tab === "build")}
+        >
           Construir
         </button>
-        <button type="button" onClick={() => setTab("write")} className={tabClass(tab === "write")}>
+        <button
+          type="button"
+          role="tab"
+          aria-selected={tab === "write"}
+          onClick={() => setTab("write")}
+          className={tabClass(tab === "write")}
+        >
           Escribir
         </button>
       </div>
