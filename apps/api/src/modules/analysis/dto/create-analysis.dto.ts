@@ -1,10 +1,11 @@
-import { IsIn, IsNotEmpty, IsOptional, IsString, MaxLength } from "class-validator";
+import { IsIn, IsNotEmpty, IsOptional, IsString, Matches, MaxLength } from "class-validator";
 import { ANALYSIS_MODES, MAX_ANALYSIS_TEXT_LENGTH, type AnalysisMode } from "@tense-lab/shared";
 import { TENSES, type Tense } from "@tense-lab/shared";
 
 export class CreateAnalysisDto {
   @IsString()
   @IsNotEmpty()
+  @Matches(/\S/)
   @MaxLength(MAX_ANALYSIS_TEXT_LENGTH)
   text: string;
 
