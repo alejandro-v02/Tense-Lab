@@ -23,10 +23,11 @@ export function UnitNode({ unit, status, onSelect }: UnitNodeProps) {
       type="button"
       disabled={locked}
       onClick={() => onSelect(unit)}
+      aria-label={`${unit.title}${locked ? ", bloqueada" : ""}`}
       whileTap={locked ? undefined : { scale: 0.96 }}
       whileHover={locked ? undefined : { y: -4 }}
       className={`glass rounded-ios flex flex-col items-start gap-2 border p-4 text-left transition ${STATUS_RING[status]} ${
-        locked ? "opacity-40" : ""
+        locked ? "cursor-not-allowed opacity-40" : "cursor-pointer"
       }`}
     >
       <span className="text-xs uppercase tracking-wide text-(--color-ink-dim)">{unit.group.replace("_", " ")}</span>
