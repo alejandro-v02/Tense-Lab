@@ -45,6 +45,8 @@ export function MapScreen() {
           <button
             type="button"
             onClick={logout}
+            aria-label="Cerrar sesión"
+            title="Cerrar sesión"
             className="rounded-ios-pill glass px-4 py-2 text-sm text-(--color-ink-dim) hover:text-(--color-ink)"
           >
             Salir
