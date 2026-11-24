@@ -53,7 +53,7 @@ export const api = {
     }),
   me: () => request<PublicUser>("/auth/me"),
   getUnits: () => request<Unit[]>("/content/units"),
-  getUnit: (id: string) => request<Unit>(`/content/units/${id}`),
+  getUnit: (id: string) => request<Unit>(`/content/units/${encodeURIComponent(id)}`),
   analyze: (body: AnalysisRequest) =>
     request<AnalysisResponse>("/analysis", {
       method: "POST",
