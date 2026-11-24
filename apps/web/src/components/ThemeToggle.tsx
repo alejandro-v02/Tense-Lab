@@ -9,6 +9,8 @@ export function ThemeToggle() {
       type="button"
       onClick={toggleTheme}
       aria-label="Cambiar tema"
+      aria-pressed={theme === "dark"}
+      title={theme === "dark" ? "Cambiar a tema claro" : "Cambiar a tema oscuro"}
       className="glass rounded-ios-pill px-4 py-2 text-sm text-(--color-ink-dim) hover:text-(--color-ink)"
     >
       {theme === "dark" ? "Oscuro" : "Claro"}
