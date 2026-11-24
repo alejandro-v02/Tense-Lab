@@ -13,8 +13,8 @@ export class GeminiClientService {
   private readonly client = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
   modelFor(size: "small" | "large"): string {
-    const small = process.env.AI_MODEL_SMALL ?? "gemini-2.0-flash";
-    const large = process.env.AI_MODEL_LARGE ?? "gemini-2.0-flash";
+    const small = process.env.AI_MODEL_SMALL ?? "gemini-2.5-flash";
+    const large = process.env.AI_MODEL_LARGE ?? "gemini-2.5-flash";
     return size === "small" ? small : large;
   }
 
