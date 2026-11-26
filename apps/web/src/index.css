@@ -11,7 +11,6 @@
   --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", Inter, "Segoe UI", system-ui,
     sans-serif;
 }
-
 /* Dark theme (default): near-black/white/gray, color reserved for small accents. */
 :root,
 :root[data-theme="dark"] {
@@ -24,7 +23,7 @@
   --color-border: rgba(255, 255, 255, 0.14);
 
   /* The only three "real" colors in the dark theme's UI chrome, used sparingly. */
-  --color-accent: #7c9eff;
+  --color-accent: #1951ee;
   --color-success: #4cd37d;
   --color-danger: #ff6b6b;
 
@@ -45,7 +44,6 @@
   --color-fn-time: #d99a4e;
   --color-fn-adverb: #5fb8c9;
   --color-fn-connector: #c9b458;
-
   --color-err-conjugation: #5b8def;
   --color-err-auxiliary: #a67bdb;
   --color-err-participle: #8d84e0;
@@ -59,11 +57,9 @@
   --color-err-wrong-tense: #ac8e68;
   --color-err-other: #8e8e93;
 }
-
 /* Light theme: off-white/gray surfaces, same restrained accents darkened for contrast. */
 :root[data-theme="light"] {
   color-scheme: light;
-
   --color-bg: #f1f1f0;
   --color-bg-elevated: #ffffff;
   --color-ink: #1c1c1e;
@@ -94,13 +90,13 @@
   --color-err-conjugation: #2f5fcf;
   --color-err-auxiliary: #7a4fb0;
   --color-err-participle: #5a4fc0;
-  --color-err-word-order: #b9711f;
+  --color-err-word-order: #76450c;
   --color-err-preposition: #2f8a9e;
   --color-err-article: #1f8a7f;
   --color-err-agreement: #c6433c;
   --color-err-vocabulary: #2f8a57;
   --color-err-spelling: #b5305a;
-  --color-err-punctuation: #93790f;
+  --color-err-punctuation: #554507;
   --color-err-wrong-tense: #8a6c47;
   --color-err-other: #6e6e73;
 }
